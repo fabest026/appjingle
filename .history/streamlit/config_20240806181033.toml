@@ -1,0 +1,11 @@
+[theme]
+primaryColor="#007bff" # blue
+backgroundColor="#f8f9fa" # light gray
+secondaryBackgroundColor="#dee2e6" # light gray
+textColor="#212529" # dark gray
+font="Arial, sans-serif"
+primaryColor="#0A2C37"
+backgroundColor="#FFFFFF"
+secondaryBackgroundColor="F5F5F5"
+textColor="#0A2C37"
+font="sans serif"
