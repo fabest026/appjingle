@@ -45,7 +45,7 @@ with st.container():
     tag_line = "<div style='text-align: center;'>Boost your business with our IT solutions</div>"
     st.markdown(tag_line, unsafe_allow_html=True)
     
-    moto = "<h3> <div style='text-align: center;'>YOUR SUCCESS IS OUR TOP CONCERN</div></h3>"
+    moto = "<3> <div style='text-align: center;'>YOUR SUCCESS IS OUR TOP CONCERN</div></h2>"
     st.markdown(moto, unsafe_allow_html=True)
 
     moto_line = "<div style='text-align: center;'>At AppJingle, we use our experience and commitment to provide great service and real value to our clients.</div>"
