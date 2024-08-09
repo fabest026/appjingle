@@ -53,7 +53,7 @@ with st.container():
     st.write("---")
 
 with st.container():
-    title = "<h3> <div style='text-align: center;'>What We Do</div></h3>"
+    title = "<h3> <div style='text-align: center;'>What We Do</div></h2>"
     st.markdown(title, unsafe_allow_html=True)
 
     dev_title = "<div style='text-align: center;'>We build AI-powered apps for your website and phone that help you make more money. We understand your business and choose the best technology to help you grow. Let's work together to make your business even better!</div>"
