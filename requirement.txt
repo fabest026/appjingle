@@ -2,3 +2,5 @@ google-generativeai
 python-dotenv
 utils
 streamlit==1.28.2
+streamlit_option_menu
+show streamlit-option-menu
