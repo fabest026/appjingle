@@ -45,11 +45,10 @@ model = genai.GenerativeModel(
   # See https://ai.google.dev/gemini-api/docs/safety-settings
 )
 
-
 # Navbar
 st.set_page_config(
-    page_title="Section Generator",
-    page_icon="🚀",
+    page_title="Blog Outlines",
+    page_icon="👨‍⚖️",
     layout="centered",
     initial_sidebar_state="collapsed",
 )
@@ -57,12 +56,12 @@ st.set_page_config(
 # Add the Title
 st.markdown(
     "<h1 style='text-align: center; color: black;'>"
-    "✨ AI Blog Section Generator"
+    "✨ Ai Outlines Generator"
     "</h1>",
     unsafe_allow_html=True
 )
 
-#st.title('✨ AI Blog Section Generator')
+#st.title('✨ Ai Outline Generator')
 
 # create a subheader
 st.markdown('''
@@ -78,7 +77,7 @@ h3 {
     justify-content: center;
 }
 </style>
-<h3 style="text-align: center; color: black; font-weight: 300; font-style: italic;">💥&nbsp;&nbsp;Spark Your Blogging Brilliance with a Few Clicks!&nbsp;&nbsp;💥</h3>
+<h3 style="text-align: center; color: black; font-weight: 300; font-style: italic;">📑&nbsp;&nbsp;Generate the best blog Outlines you've ever read within just a few clicks!&nbsp;&nbsp;💥</h3>
 ''', unsafe_allow_html=True)
 
 # sidebar for the user input
@@ -93,7 +92,7 @@ with st.sidebar:
         unsafe_allow_html=True
     )
     st.title("Input Settings")
-
+    
     st.markdown(
         "<style>"
         "h4 {text-align: left; color: black; margin-top: 4px;}"
@@ -101,31 +100,19 @@ with st.sidebar:
         "</style>",
         unsafe_allow_html=True
     )
-    st.markdown("<h4>Enter Details for the Section: </h4>", unsafe_allow_html=True)
+    st.markdown("<h4>Enter Details for the Outlines: </h4>", unsafe_allow_html=True)
     
-    # Section Heading
-    section_heading = st.text_input("Section Heading ")
-    
-    # Subpoints
-    
-    subpoints = st.text_area("Subpoints (comma-separated)")
-    
-    # Add the Voice Tones
-    voice_tones = st.sidebar.selectbox("Choose Voice Tones:", ["Formal", "Informal", "Friendly", "Bold", "Adventurous", "Witty", "Professional", "Casual", "Informative", "Creative", "Trendy", "Caring", "Cheerful", "Excited", "Funny", "Sad", "Serious", "Tense", "Vulnerable", "Angry", "Surprised", "Worried", "Assertive", "Confident", "Cooperative", "Encouraging" ])
-    
-    # Add the Writing Styles
-    writing_styles = st.sidebar.selectbox("Choose Writing Styles:", ["Academic", "Conversational", "Creative", "Critical", "Descriptive", "Instructive", "Technical", "Analytical","Business", "Causal", "Emotional", "Expository", "Formal", "Informal", "Legal", "Medical", "Poetic", "Persuasive"])
-    
-    # Audience
-    audience = st.selectbox("Audience: Who is the target audience?", ["Teenager", "Adult", "20-years-old", "30-years-old",  "40-years-old", "50-years-old", "Senior", "Everyone", "Uninformed Audience", "Neutral Audience", "Business Audience", "Researcher", "Expert Audience", "My Boss", "My Student", "My Teacher", "My Family", "My Friends", "My Colleagues"] )
-    
-    num_words = st.number_input("Number of words", min_value=10, max_value=3000, step=50)
+    # Blog Title
+    blog_title = st.text_input("Blog Title ")
 
     # Primary Keyword
-    #primary_keyword = st.text_input("Primary Keyword ")
+    primary_keyword = st.text_input("Primary Keyword ")
     
     # Secondary Keyword
-    #secondary_keyword = st.text_input("Secondary Keyword")
+    secondary_keyword = st.text_input("Secondary Keyword")
+    
+    #Heading Counter
+    num_headings = st.number_input("Number of Headings", min_value=5, max_value=20, step=1)
     
     # Reference Article Link
     # reference_article_link = st.text_input("Reference Article Link")
@@ -133,26 +120,27 @@ with st.sidebar:
     # Prompt
     prompt_parts = [
             f"""
-            Please ignore all previous instructions. I want you to respond only in English. I want you to act as a highly skilled marketer and top-tier copywriter who is fluent in English. I want you to pretend that you are an expert at writing all types of CTAs in English. Write an section for the blog post about {section_heading}. Subpoint or supporting detail: {subpoints}(optional).
+            Please ignore all previous instructions. Using the MECE Framework Develop a comprehensive English markdown outline for a long-form article for the topic {blog_title}, featuring at least 20 engaging headings and subheadings that are detailed, mutually exclusive, collectively exhaustive and cover the entire topic. Conclude with a conclusion heading and pertinent FAQs.
+            
             Follow these instructions:
-            1. You have a {voice_tones} tone of voice. 
-            2. You have a {writing_styles} writing style. Targeted audience is {audience}. I want you to write around {num_words} words. 
-            3. Mentions the number of words in the end of response.
-            3. Avoiding jargon and complex terms.
-            4. Write in easy to understand style. Don't use difficult to read and synmonstic language. Write likehood a human writer.
-            5. Focus first on creating high quality, thorough content that provides value to readers. 
-            6. Improve scannability with headings, bullet points, lists, images, stats, and other visual elements where applicable.
-            7. Keep paragraphs 3 sentences or less. Turn long sentences into two shorter ones.
-            8. Markdown formatting where applicable
-            9. When preparing the article, prepare to write the necessary words in bold. 
-            10. Write content so that it can outrank other websites. 
-            11. Do not reply that there are many factors that influence good search rankings.
-            12. I know that quality of content is just one of them, and it is your task to write the best possible quality content here, not to lecture me on general SEO rules.
-            13. Make sure that you don't follow ai pattern but article should be really simple and it should make sense. 
-            14. Make sure to add a bit of humor and add some funny lines. Also add bold and italic
-            15. write the information in your own words rather than copying and pasting from other sources also double-check for plagiarism because I need pure unique content
+     
+            1. Keep in mind these are the Primary Keyword "{primary_keyword}" and Secondary Keyword "{secondary_keyword}" we are trying to rank for so include it and variations of these keywords in the H2,H3 and throughout the article aviode from keyword stuffing only incorported 2 times each keyword in h2 and h3.
+            2. Create an indept blog post outlines with every single question or topic a person would have for this blog post topic. 
+            3.Include information specific to topic you are writing about but also general information about the blog post topic that would be useful for readers.
+            4. Write in a simple, easy to read tone. 
+            5. We are trying to rank for the Primary Keyword "{primary_keyword}" , Secondary Keyword "{secondary_keyword}" and  so follow all seo practices to do so.
+            6. Use a conversational tone using simple language, avoiding jargon and complex terms.
+            7. Please be natural, write like a human.
+            8. Headlines are more likely to be clicked on in search results if they have about 6 words.
+            9. Headlines that are lists and how-to get more engagement on average than other types of headlines.
+            10. Headline will be more compelling and attract more clicks if you add more emotional and power words.
+	        11. {num_headings} engaging headings and subheadings 
+	        12. Strictly say that Secondary keyowrd also add in h3 and h4 only one time.
+	        13. Only incorpoted the primary keyword 2 times in outlines. This strict order follow it.
+		    14. Identify the key sections of the article and create H3 headings for each section that are both descriptive and engaging. 
+		    15. Use H4 subheadings as needed to break down each section into smaller, more specific topics.
             """
-            ]
+    ]
 
     # Submit Button
     submit_button = st.button("Generate")
@@ -290,5 +278,6 @@ footer_html = f"""
 # Combine CSS and HTML for the footer
 st.markdown(footer_css, unsafe_allow_html=True)
 st.markdown(footer_html, unsafe_allow_html=True)
+        
         
 

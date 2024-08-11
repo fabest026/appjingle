@@ -119,7 +119,7 @@ with st.sidebar:
     # Audience
     audience = st.selectbox("Audience: Who is the target audience?", ["Teenager", "Adult", "20-years-old", "30-years-old",  "40-years-old", "50-years-old", "Senior", "Everyone", "Uninformed Audience", "Neutral Audience", "Business Audience", "Researcher", "Expert Audience", "My Boss", "My Student", "My Teacher", "My Family", "My Friends", "My Colleagues"] )
     
-    num_words = st.number_input("Number of words", min_value=10, max_value=3000, step=50)
+    num_words = st.number_input("Number of words", min_value=250, max_value=3000, step=50)
 
     # Primary Keyword
     #primary_keyword = st.text_input("Primary Keyword ")
