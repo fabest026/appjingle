@@ -144,7 +144,7 @@ with st.sidebar:
                     3. Apply Markdown language and Heading tags (H1 for the main title, H2 for headings, and Strong or bold tags for subheadings) to enhance readability and SEO. 
                     Compose a meta title (up to 60 characters) and a meta description (up to 160 characters) which are engaging and relevant to the topic.
                     4. Use {keywords} in meta description.
-                    Following the introduction, include a Table of Contents (TOC) in a table format with two columns: 1. Sr# 2. Headings. Write must be {num_headings} headings, relevant subheadings and explain them in detail. Develop engaging, detailed paragraphs using these headings and subheadings. The introduction and conclusion paragraph should not be more than 10% of text.
+                    Following the introduction, include a Table of Contents (TOC) in a table format with two columns: 1. Sr# 2. Headings. Write must be 10-15 headings, relevant subheadings and explain them in detail. Develop engaging, detailed paragraphs using these headings and subheadings. The introduction and conclusion paragraph should not be more than 10% of text.
                     Conclude the article and follow up with five pertinent FAQs (with answers) relevant to the topic. Ensure each question ends with a question mark (?).
                     The goal is to produce valuable content that engages readers and satisfies SEO needs. Bold the headings, subheadings and keypoints.
             """
