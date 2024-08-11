@@ -112,7 +112,7 @@ with st.sidebar:
     secondary_keyword = st.text_input("Secondary Keyword")
     
     #Heading Counter
-    num_headings = st.number_input("Number of Headings", min_value=3, max_value=20, step=1)
+    num_headings = st.number_input("Number of Headings", min_value=5, max_value=20, step=1)
     
     # Reference Article Link
     # reference_article_link = st.text_input("Reference Article Link")

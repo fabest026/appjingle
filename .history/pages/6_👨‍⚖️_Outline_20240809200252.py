@@ -111,9 +111,6 @@ with st.sidebar:
     # Secondary Keyword
     secondary_keyword = st.text_input("Secondary Keyword")
     
-    #Heading Counter
-    num_headings = st.number_input("Number of Headings", min_value=3, max_value=20, step=1)
-    
     # Reference Article Link
     # reference_article_link = st.text_input("Reference Article Link")
 
@@ -134,7 +131,7 @@ with st.sidebar:
             8. Headlines are more likely to be clicked on in search results if they have about 6 words.
             9. Headlines that are lists and how-to get more engagement on average than other types of headlines.
             10. Headline will be more compelling and attract more clicks if you add more emotional and power words.
-	        11. {num_headings} engaging headings and subheadings 
+	        11. 20 engaging headings and subheadings 
 	        12. Strictly say that Secondary keyowrd also add in h3 and h4 only one time.
 	        13. Only incorpoted the primary keyword 2 times in outlines. This strict order follow it.
 		    14. Identify the key sections of the article and create H3 headings for each section that are both descriptive and engaging. 
