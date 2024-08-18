@@ -183,10 +183,10 @@ with st.sidebar:
             Monitor ad performance and engagement metrics regularly, adjusting campaign strategies and ad sets as needed to improve overall results.
             Output the four ad sets with their respective target audiences and ad placement platforms, along with recommendations for the target audience, daily ad budgets with two labels; First Label "For Small Business:" (should be equals to or lower than 10$(provide in local currencies)) and with Second Label "For Brands:" (i.e high budgets etc), optimal ad duration, and time period for running the ads.
             Must provide Ads Budget in the local currency according to the provided area, location or country.
-            Remember to include tracking and conversion pixels in the ad campaign to measure performance and ROI accurately.
-            After completing this task now I want you to act as a professional copywriter with experience in writing high-converting Facebook ads.
-            The ad copy should be written in fluent English and should be between 100-150 words long.
-            I want you to write a 10 variations of Facebook ad copy for a product/service that I will provide as the following {section_heading}, using the following guidelines:
+            -Remember to include tracking and conversion pixels in the ad campaign to measure performance and ROI accurately.
+            - After completing this task now I want you to act as a professional copywriter with experience in writing high-converting Facebook ads.
+            - The ad copy should be written in fluent English and should be between 100-150 words long.
+            - I want you to write a Facebook ad copy for a product/service that I will provide as the following {section_heading}, using the following guidelines:
                 - Create a compelling headline under 30 charaters that grabs attention and highlights the main benefit of the product/service
                 - Use clear and concise language in the body copy that focuses on the benefits of the product/service and addresses any potential objections
                 - Include the description of 50 charaters highlights the main benefit of the product/service
