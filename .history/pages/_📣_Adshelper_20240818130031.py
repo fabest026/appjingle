@@ -261,18 +261,21 @@ with st.sidebar:
 
 # Render profile footer in sidebar at the "bottom"
 # Set a background image
+<<<<<<<<<<<<<<  ✨ Codeium Command 🌟  >>>>>>>>>>>>>>>>
 def set_background_image():
     st.markdown(
         """
         <style>
         .stApp {
             background-image: url("https://images.pexels.com/photos/4097159/pexels-photo-4097159.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-image: url("https://images.pexels.com/photos/4097159/pexels-photo-4097159.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
             background-size: cover;
         }
         </style>
         """,
         unsafe_allow_html=True
     )
+<<<<<<<  feba4840-1b75-4009-b80a-620cd9d09f37  >>>>>>>
 
 set_background_image()
 
