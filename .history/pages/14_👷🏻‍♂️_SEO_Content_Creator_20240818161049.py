@@ -161,7 +161,7 @@ with st.sidebar:
                     11. Must be add Link out to external resources.
                     12. Must Add DoFollow links pointing to external resources.
                     13. Must be Add external links in whole content body at least 3 times.
-                    Generate an eye-catchy meta title and meta description related to content body with the Focus keyword "{focus_keyword}". in a table format. 1. Meta Title 2. Meta Description. 
+                    Generate an eye-catchy meta title and meta description related to content body with the Focus keyword "{focus_keyword}". in a table format. 1. Heading 2. Report. 
 
                     1. Ensure the meta title must be less than 60 characters length limit.
                     2. Focus Keyword must be Fully injected in naturally in the meta title in every variation.
