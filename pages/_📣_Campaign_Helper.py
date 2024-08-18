@@ -83,7 +83,7 @@ h3 {
     justify-content: center;
 }
 </style>
-<h3 style="text-align: center; color: black; font-weight: 300; font-style: italic;">✨ Powered by: AppJingle Services ✨</h3>                                                                                                                                                                                                                                                                                        
+<h3 style="text-align: center; color: black; font-weight: 300; font-style: italic;">✨ Powered by: AppJingle Solutions ✨</h3>                                                                                                                                                                                                                                                                                        
   
   
 ''', unsafe_allow_html=True)
