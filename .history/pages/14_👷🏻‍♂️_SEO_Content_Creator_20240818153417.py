@@ -178,7 +178,7 @@ with st.sidebar:
                     1. Beginning and Ending Words must be in the meta title and meta description. Most readers only look at the first and last 3 words of a headline before deciding whether to click.
                     
                     Following the introduction, include a Table of Contents (TOC) in a table format with two columns: 1. Sr# 2. Headings. Write must be {num_headings} headings, relevant subheadings and explain them in detail. Develop {writing_styles}, detailed paragraphs using these headings and subheadings. The introduction and conclusion paragraph should not be more than 10% of text.
-                    Conclude the article and follow up with five pertinent FAQs (with answers) relevant to the topic. Ensure each question ends with a question mark (?). Pattern of content is like this. 1. Meta title and Meta description 2. H1 3. H2  4. Table of Contents 5. detailed paragraphs using these headings and subheadings 6. Conclusion. 7. FAQs.
+                    Conclude the article and follow up with five pertinent FAQs (with answers) relevant to the topic. Ensure each question ends with a question mark (?). Pattern of content is like this. 1. Meta title and Meta description 2. H1 3. H2  4. 
                     The goal is to produce valuable content that engages readers and satisfies SEO needs. Bold the headings, subheadings and keypoints.
             """
             ]
