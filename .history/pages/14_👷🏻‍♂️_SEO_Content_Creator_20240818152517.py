@@ -169,6 +169,7 @@ with st.sidebar:
                     4. Focus Keyword must be Fully injected in naturally in the meta description in every variation.
                     3. Use a conversational tone using simple language, avoiding jargon and complex terms.
                     4. Please be natural, write like a human.
+                    6. Present your results in a table with two columns: Title and Description.
                     7. Headlines that are about 55 characters long will display fully in search results and tend to get more clicks.
                     7. Headlines are more likely to be clicked on in search results if they have about 6 words.
                     8. Positive headlines tend to get better engagement than neutral or negative ones.
