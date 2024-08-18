@@ -145,32 +145,32 @@ with st.sidebar:
 		            2. Write in human don't use complex terms like showcase, leverage, delve, craft, dig, dive, tailored etc. write unqiue
                     3. The content should be original to avoid plagiarism. Also, ensure it doesn't appear AI-generated.
                     4. Apply Markdown language and Heading tags (H1 for the main title, H2 for headings, and Strong or bold tags for subheadings) to enhance readability and SEO.  
-		            5. Inject Focus Keyword in the main title (H1)
-      		        6. Inject Focus Keyword at the beginning of the main title main title (H1).
-		            7. Inject the Focus keyword in first 100 words of introduction.
-                    8. Focus Keyword density must be 0.4% and don't exceed above of to 1%.  
-                    9. Primary Keyword atleast one time in content body.
-                    10. Use the Secondary keywords precisely in content body and density must be less than 0.3%.
-                    11. Link out to external resources.
-                    12. Add DoFollow links pointing to external resources.
-                    13. Add external links in content body.
+		    5. Inject Focus Keyword in the main title (H1)
+      		    6. Inject Focus Keyword at the beginning of the main title main title (H1).
+		    7. Inject the Focus keyword in first 100 words of introduction.
+		    8. Focus Keyword density must be 0.4% and don't exceed above of to 1%.  
+		    9. Primary Keyword atleast one time in content body.
+		    10. Use the Secondary keywords precisely in content body and density must be less than 0.3%.
+		    11. Link out to external resources.
+		    12. Add DoFollow links pointing to external resources.
+		    13. Add external links in content body.
                     Generate an eye-catchy meta title and meta description for a blog post with the Focus keyword "{focus_keyword}"
 
-                    1. Ensure the meta title must be less than 60 characters length limit.
-                    2. Primary Keyword must be Fully injected in naturally in the meta title in every variation.
-                    3. Ensure the meta description must be less than 160 characters length limit.
-                    4. Primary Keyword must be Fully injected in naturally in the meta description in every variation.
-                    3. Use a conversational tone using simple language, avoiding jargon and complex terms.
-                    4. Please be natural, write like a human.
-                    5. Generate 15 variations of meta title and description.
-                    6. Present your results in a table with two columns: Title and Description.
-                    7. Headlines that are about 55 characters long will display fully in search results and tend to get more clicks.
-                    7. Headlines are more likely to be clicked on in search results if they have about 6 words.
-                    8. Positive headlines tend to get better engagement than neutral or negative ones.
-                    9. Headlines that are lists and how-to get more engagement on average than other types of headlines.
-                    8. Headlines that are lists and how-to get more engagement on average than other types of headlines.
-                    9. Headline will be more compelling and attract more clicks if you add more emotional and power words.
-                    1. Beginning and Ending Words must be in the meta title and meta description. Most readers only look at the first and last 3 words of a headline before deciding whether to click.
+			1. Ensure the meta title must be less than 60 characters length limit.
+    		2. Primary Keyword must be Fully injected in naturally in the meta title in every variation.
+    		3. Ensure the meta description must be less than 160 characters length limit.
+    		4. Primary Keyword must be Fully injected in naturally in the meta description in every variation.
+    		3. Use a conversational tone using simple language, avoiding jargon and complex terms.
+    		4. Please be natural, write like a human.
+    		5. Generate 15 variations of meta title and description.
+    		6. Present your results in a table with two columns: Title and Description.
+    		7. Headlines that are about 55 characters long will display fully in search results and tend to get more clicks.
+    		7. Headlines are more likely to be clicked on in search results if they have about 6 words.
+    		8. Positive headlines tend to get better engagement than neutral or negative ones.
+    		9. Headlines that are lists and how-to get more engagement on average than other types of headlines.
+    		8. Headlines that are lists and how-to get more engagement on average than other types of headlines.
+    		9. Headline will be more compelling and attract more clicks if you add more emotional and power words.
+    		1. Beginning and Ending Words must be in the meta title and meta description. Most readers only look at the first and last 3 words of a headline before deciding whether to click.
                     
                     Following the introduction, include a Table of Contents (TOC) in a table format with two columns: 1. Sr# 2. Headings. Write must be {num_headings} headings, relevant subheadings and explain them in detail. Develop engaging, detailed paragraphs using these headings and subheadings. The introduction and conclusion paragraph should not be more than 10% of text.
                     Conclude the article and follow up with five pertinent FAQs (with answers) relevant to the topic. Ensure each question ends with a question mark (?).
