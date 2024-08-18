@@ -201,7 +201,7 @@ with st.sidebar:
                         5. Use Focus Keyword in first paragraph
                         6. Focus Keyword atleast 3 times precisely in content body.
                         9. Primary Keyword atleast 3 times precisely in content body.
-                       10. Secondary keyword atleast 2 times precisely in content body.
+                       10. Inject naturally the Secondary keyword atleast 2 times precisely in content body.
                         
                         
             """
