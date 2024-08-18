@@ -190,7 +190,7 @@ with st.sidebar:
                         6. Each primary keyword should be atleast one time in content
                         7. Each secondary keyword should be atleast one time in content
                         8.Number of words
-                        9. make the column table and add the emojis.
+                        make the coumn table and add the emjoi
                         
             """
             ]
