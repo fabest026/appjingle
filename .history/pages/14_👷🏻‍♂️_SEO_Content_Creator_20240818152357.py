@@ -110,7 +110,7 @@ with st.sidebar:
     primary_keyword = st.text_input("Primary Keyword (required)", placeholder="enter primary keyword")
     
     # Secondary Keywords
-    secondary_keywords = st.text_input("Secondary Keyword", placeholder="enter secondary keyword")
+    secondary_keywords = st.text_input("Secondary Keyword (comma-separated)", placeholder="enter secondary keywords")
    
     
     # Add the Voice Tones
