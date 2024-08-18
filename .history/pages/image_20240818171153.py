@@ -1,7 +1,14 @@
 ## loading all the environment variables
+<<<<<<<<<<<<<<  ✨ Codeium Command 🌟  >>>>>>>>>>>>>>>>
+import os
+import sys
 from dotenv import load_dotenv
 load_dotenv() 
 
+# Add the lib folder to the PATH
+sys.path.append(os.path.join(os.path.dirname(__file__), 'lib'))
+
+# Import the required libraries
 # Import Important libraries
 import streamlit as st
 
@@ -47,3 +54,5 @@ image = pipe(
     generator=torch.Generator("cpu").manual_seed(0)
 ).images[0]
 image.save("flux-schnell.png")
+
+<<<<<<<  2112d9cf-db80-4db4-a00d-503c4bf99591  >>>>>>>
