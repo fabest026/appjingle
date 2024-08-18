@@ -3,5 +3,5 @@ python-dotenv
 utils
 streamlit==1.28.2
 streamlit_option_menu
-torch
+import torch
 
