@@ -38,7 +38,7 @@ with st.sidebar:
     input = st.text_input("Text/Paragraph") 
     
 
-prompt = "{input}"
+prompt = "A cat holding a sign that says hello world"
 image = pipe(
     prompt,
     guidance_scale=0.0,

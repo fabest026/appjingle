@@ -38,7 +38,7 @@ with st.sidebar:
     input = st.text_input("Text/Paragraph") 
     
 
-prompt = "{input}"
+prompt = "{voice_tones}"
 image = pipe(
     prompt,
     guidance_scale=0.0,

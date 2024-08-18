@@ -35,10 +35,10 @@ with st.sidebar:
     st.markdown("<h4>Enter Details for the Rephrasing: </h4>", unsafe_allow_html=True)
 
     # Blog Title
-    input = st.text_input("Text/Paragraph") 
+    text = st.text_area("Text/Paragraph") 
     
 
-prompt = "{input}"
+prompt = "A cat holding a sign that says hello world"
 image = pipe(
     prompt,
     guidance_scale=0.0,
