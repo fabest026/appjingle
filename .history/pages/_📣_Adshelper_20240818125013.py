@@ -127,7 +127,7 @@ with st.sidebar:
     #audience = st.selectbox("Audience: Who is the target audience?", ["Teenager", "Adult", "20-years-old", "30-years-old",  "40-years-old", "50-years-old", "Senior", "Everyone", "Uninformed Audience", "Neutral Audience", "Business Audience", "Researcher", "Expert Audience", "My Boss", "My Student", "My Teacher", "My Family", "My Friends", "My Colleagues"] )
     
     # Country
-    country_options = ["United States", "Canada", "United Kingdom", "Australia",  "Germany", "France", "India", "Pakistan", "UAE" "Nigeria", "Brazil", "Russia", "China", "Japan", "South Korea", "South Africa", "Spain", "Italy", "Turkey", "Netherlands", "Belgium", "Sweden", "Switzerland", "New Zealand", "Singapore", "Malaysia"]
+    country_options = ["United States", "Canada", "United Kingdom", "Australia",  "Germany", "France", "India", "Pakistan",  "Nigeria", "Brazil", "Russia", "China", "Japan", "South Korea", "South Africa", "Spain", "Italy", "Turkey", "Netherlands", "Belgium", "Sweden", "Switzerland", "New Zealand", "Singapore", "Malaysia"]
     country = st.selectbox('Country', country_options)
     #num_words = st.number_input("Number of words", min_value=250, max_value=3000, step=50)
 
