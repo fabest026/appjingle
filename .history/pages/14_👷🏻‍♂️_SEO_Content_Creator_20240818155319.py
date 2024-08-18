@@ -182,7 +182,6 @@ with st.sidebar:
                     The goal is to produce valuable content that engages readers and satisfies SEO needs.  
                      
                      Make the SEO Optimzation grade Report in a table format. 1. Heading 2. Emojis.  Check the content AI generated is fully SEO rules following. 
-                        1. Optimization Garde.
                         1.Content should be 800 words
                         2. Meta title length less than 60 characters.
                         3. Meta description length less than 160 characters.
