@@ -119,7 +119,7 @@ with st.sidebar:
     7. Headlines are more likely to be clicked on in search results if they have about 6 words.
     8. Headlines that are lists and how-to get more engagement on average than other types of headlines.
     9. Headline will be more compelling and attract more clicks if you add more emotional and power words.
-    1. Beginning and Ending Words must be in the meta title and meta description. Most readers only look at the first and last 3 words of a headline before deciding whether to click.
+    1. Beginning and Ending Words
     """
     ]
 
