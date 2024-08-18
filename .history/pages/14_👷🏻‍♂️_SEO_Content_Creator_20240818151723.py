@@ -152,7 +152,6 @@ with st.sidebar:
                     8. Focus Keyword density must be less than 0.2%.
                     9. Primary keyword density must be less than 0.1%.
                     10. Secondary keyword density must be less than 0.1%.  
-                    11. Inject naturally Focus Keyword atleast 3 times precisely in content body.
                     9. Inject naturally Primary Keyword atleast 3 times precisely in content body.
                     10. Inject naturally the Secondary keyword atleast 2 times precisely in content body.
                     11. Must be add Link out to external resources.
