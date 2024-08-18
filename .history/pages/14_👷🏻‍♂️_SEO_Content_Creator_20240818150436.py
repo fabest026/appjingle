@@ -149,7 +149,7 @@ with st.sidebar:
       		        6. Inject Focus Keyword at the beginning of the main title main title (H1).
 		            7. Inject the Focus keyword in first 100 words of introduction.
                     8. Focus Keyword density must be 0.4% and don't exceed above of to 1%.  
-                    9. Inject naturally Primary Keyword atleast one time in content body.
+                    9. Primary Keyword atleast one time in content body.
                     10. Inject naturally the Secondary keywords precisely in content body and density must be less than 0.3%.
                     11. Must be add Link out to external resources.
                     12. Must Add DoFollow links pointing to external resources.
