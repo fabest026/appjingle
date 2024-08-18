@@ -52,6 +52,7 @@ if input_text:
     image.save("flux-schnell.png")
     st.image("flux-schnell.png", caption="Generated Image")
 
+<<<<<<<<<<<<<<  ✨ Codeium Command 🌟  >>>>>>>>>>>>>>>>
 # Error handling
 try:
     # Generate and display the image
@@ -69,3 +70,4 @@ try:
     
 except Exception as e:
     st.error(f"An error occurred: {str(e)}")
+<<<<<<<  01b86041-f9f4-4eed-a29f-afb89dfa3937  >>>>>>>
