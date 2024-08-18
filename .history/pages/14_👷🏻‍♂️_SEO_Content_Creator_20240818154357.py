@@ -182,8 +182,8 @@ with st.sidebar:
                     The goal is to produce valuable content that engages readers and satisfies SEO needs. Bold the headings, subheadings and keypoints. Check the content AI generated is fully SEO rules following. 
                         1.Content should be 800 words
                         2. Use Focus Keyword in the main title
-                        3. Use Focus Keyword at the beginning of the main title
-                        4. Keyword density is aim for around less than 0.41%.
+                        3. Use Focus Keyword at the beginning of the main title,
+                        4. Keyword density is aim for around 1%,
                         5. Use Focus Keyword in first paragraph
                         6. Each primary keyword should be atleast one time in content
                         7. Each secondary keyword should be atleast one time in content

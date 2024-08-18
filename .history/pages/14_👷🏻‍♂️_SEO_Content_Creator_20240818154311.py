@@ -183,13 +183,13 @@ with st.sidebar:
                         1.Content should be 800 words
                         2. Use Focus Keyword in the main title
                         3. Use Focus Keyword at the beginning of the main title
-                        4. Keyword density is aim for around less than 0.41%.
+                        4. Keyword density is 2.44% (aim for around 1%)
                         5. Use Focus Keyword in first paragraph
                         6. Each primary keyword should be atleast one time in content
                         7. Each secondary keyword should be atleast one time in content
                         Number of words
                         
-                        Make the column and Tell the optimzation grade.
+                        Make the column and metion report
             """
             ]
 
