@@ -130,7 +130,7 @@ with st.sidebar:
             1. You can write {voice_tones}, you write in an active voice, you use transition words, you never plagiarize, you can pass AI detection tests for content, and you know how to rank in the first position in search engines. Rewrite the content so it is 100% unique and remove any plagiarism. 
             2. I want you to Rephrasing around {word_count} words on {text} in the english language. Do not use jargon or complex terms. Do not write conclusions or add additional details. Rewrite to the point.     
             3. Targeted audience is {audience}. Don't add the intro and bullets to the article. Write in easy to understand style. Don't use difficult to read and synmonstic language. Write likehood a human writer. 
-            4. write in human don't use complex terms like showcase, leverage, delve, craft, dig, dive, tailored etc. write unqiue
+            write in human don't use complex terms like showcase, leverage, delve, craft, dig, dive, tailored etc. write unqiue
             4. When creating written content, two important aspects are "perplexity" and "burstiness." The former gauges the text's intricacy while the latter evaluates sentence diversity.
             5. Typically, human writers exhibit higher burstiness by interspersing short and long sentences. 
             6. In contrast, AI-generated sentences tend to be uniform in length.
