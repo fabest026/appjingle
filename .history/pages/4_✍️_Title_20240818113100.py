@@ -109,9 +109,9 @@ with st.sidebar:
     Follow these instructions Strictly:
 
     1. Ensure the meta title must be less than 60 characters length limit.
-    2. Primary Keyword must be Fully injected in naturally in the meta title in every variation.
+    2. Primary Keyword must be Fully injected in naturally in the meta title.
     3. Ensure the meta description must be less than 160 characters length limit.
-    4. Primary Keyword must be Fully injected in naturally in the meta description in every variation.
+    4. 
     3. Use a conversational tone using simple language, avoiding jargon and complex terms.
     4. Please be natural, write like a human.
     5. Generate 15 variations of meta title and description.
