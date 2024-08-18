@@ -104,13 +104,10 @@ with st.sidebar:
     
     
     # Section Heading
-    focus_keyword = st.text_input("Focus Keyword (required)", placeholder="enter focus keyword")
+    focus_keyword = st.text_input("Focus Keyword (required)", placeholder="e.g. keyword research, content marketing")
     
     # Primary Keyword
-    primary_keywords = st.text_input("Primary Keyword (required)", placeholder="enter primary keyword")
-    
-    # Secondary Keywords
-    secondary_keywords = st.text_area("Secondary Keywords (comma-separated)", placeholder="enter secondary keywords")
+    keywords = st.text_input("Recommended Keywords (comma-separated)")
     
     # Subpoints
     

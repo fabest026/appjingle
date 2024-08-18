@@ -109,8 +109,7 @@ with st.sidebar:
     # Primary Keyword
     primary_keywords = st.text_input("Primary Keyword (required)", placeholder="enter primary keyword")
     
-    # Secondary Keywords
-    secondary_keywords = st.text_area("Secondary Keywords (comma-separated)", placeholder="enter secondary keywords")
+    # 
     
     # Subpoints
     
