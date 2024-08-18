@@ -148,7 +148,6 @@ with st.sidebar:
 		            5. Inject Focus Keyword in the main title (H1)
                     6. Inject Focus Keyword at the beginning of the main title (H1).
                     6. Inject Primary Keyword at the beginning of the H2.
-                    7. H2 must be separted to H1. 
                     7. Inject the Secondary keyword in H3.
 		            7. Inject the Focus keyword in first 100 words of introduction.
                     8. Focus Keyword density must be less than 0.2%.

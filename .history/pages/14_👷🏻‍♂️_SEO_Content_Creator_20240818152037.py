@@ -146,10 +146,9 @@ with st.sidebar:
                     3. The content should be original to avoid plagiarism. Also, ensure it doesn't appear AI-generated.
                     4. Apply Markdown language and Heading tags (H1 for the main title, H2 for headings, and Strong or bold tags for subheadings) to enhance readability and SEO.  
 		            5. Inject Focus Keyword in the main title (H1)
-                    6. Inject Focus Keyword at the beginning of the main title (H1).
+                    6. Inject Focus Keyword at the beginning of the main title main title (H1).
                     6. Inject Primary Keyword at the beginning of the H2.
-                    7. H2 must be separted to H1. 
-                    7. Inject the Secondary keyword in H3.
+                    
 		            7. Inject the Focus keyword in first 100 words of introduction.
                     8. Focus Keyword density must be less than 0.2%.
                     9. Primary keyword density must be less than 0.1%.
