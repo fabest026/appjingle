@@ -297,6 +297,7 @@ hide_st_style = """
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
+<<<<<<<<<<<<<<  ✨ Codeium Command 🌟  >>>>>>>>>>>>>>>>
 # Custom CSS to inject into the Streamlit app
 footer_css = """
 <style>
@@ -309,9 +310,11 @@ footer_css = """
     color: black;
     text-align: right;
     padding-right: 1rem;
+    padding-right: 10px;
 }
 </style>
 """
+<<<<<<<  2a2b13b7-889e-42dd-a66e-f857fd69b592  >>>>>>>
 
 
 # HTML for the footer - replace your credit information here
