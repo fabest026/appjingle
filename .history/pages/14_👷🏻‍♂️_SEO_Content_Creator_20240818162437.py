@@ -203,7 +203,7 @@ with st.sidebar:
                         9. Primary Keyword atleast 3 times precisely in content body.
                        10. Secondary keyword atleast 2 times precisely in content body.
                        
-                    Write the 4 image prompt acording to article content body with the Focus keyword "{focus_keyword}", Primary Keyword "{primary_keyword}", Secondary Keyword "{secondary_keywords}" for the designer ai and ideogram ai in the table format. 1. Heading 2. Prompt.  
+                    Write the 4 image prompt acording to article content body with the Focus keyword "{focus_keyword}",  for the designer ai and ideogram ai in the table format. 1. Heading 2. Prompt.  
                         
                         
             """
