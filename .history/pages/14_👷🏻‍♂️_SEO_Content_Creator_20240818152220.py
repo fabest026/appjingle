@@ -142,7 +142,7 @@ with st.sidebar:
                     Here are the instructions to follow:
 
                     1. Use a {voice_tones} tone using {writing_styles} writing style.
-                    2. Content must be {num_words} words. 
+                    2. Content must be {num_words} words 
 		            2. Write in human don't use complex terms like showcase, leverage, delve, craft, dig, dive, tailored etc. write uniquely.
                     3. The content should be original to avoid plagiarism. Also, ensure it doesn't appear AI-generated.
                     4. Apply Markdown language and Heading tags (H1 for the main title, H2 for headings, and Strong or bold tags for subheadings) to enhance readability and SEO.  
