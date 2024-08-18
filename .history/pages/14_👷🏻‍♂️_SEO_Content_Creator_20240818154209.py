@@ -188,8 +188,7 @@ with st.sidebar:
                         6. Each primary keyword should be atleast one time in content
                         7. Each secondary keyword should be atleast one time in content
                         Number of words
-                        
-                        Make the column and metion report
+                        607
             """
             ]
 

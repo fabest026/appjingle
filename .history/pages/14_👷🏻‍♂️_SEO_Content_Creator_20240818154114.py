@@ -179,17 +179,7 @@ with st.sidebar:
                     
                     Following the introduction, include a Table of Contents (TOC) in a table format with two columns: 1. Sr# 2. Headings. Write must be {num_headings} headings, relevant subheadings and explain them in detail. Develop {writing_styles}, detailed paragraphs using these headings and subheadings. The introduction and conclusion paragraph should not be more than 10% of text.
                     Conclude the article and follow up with five pertinent FAQs (with answers) relevant to the topic. Ensure each question ends with a question mark (?). Write in Markdown Format. Pattern of content is like this. 1. Meta title and Meta description 2. H1 3. H2 4. Introduction  5. Table of Contents 6. detailed paragraphs using these headings and subheadings 6. Conclusion. 7. FAQs. 8. References.
-                    The goal is to produce valuable content that engages readers and satisfies SEO needs. Bold the headings, subheadings and keypoints. Check the content AI generated is fully SEO rules following. Focus keyword
-                        1.Content should be 800 words
-                        2. Use Focus Keyword in the main title
-                        3. Use Focus Keyword at the beginning of the main title
-                        4. Keyword density is 2.44% (aim for around 1%)
-                        5. Use Focus Keyword in first paragraph
-                        6. Each primary keyword should be atleast one time in content
-                        7. Each secondary keyword should be atleast one time in content
-                        Number of words
-                        
-                        Make the column and metion report
+                    The goal is to produce valuable content that engages readers and satisfies SEO needs. Bold the headings, subheadings and keypoints. Check the content AI generated is fully SEO rules following. 
             """
             ]
 
