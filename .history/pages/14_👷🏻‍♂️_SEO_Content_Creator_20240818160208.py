@@ -181,7 +181,7 @@ with st.sidebar:
                     Conclude the article and follow up with five pertinent FAQs (with answers) relevant to the topic. Ensure each question ends with a question mark (?). Write in Markdown Format. Pattern of content is like this. 1. Meta title and Meta description 2. H1 3. H2 4. Introduction  5. Table of Contents 6. detailed paragraphs using these headings and subheadings 6. Conclusion. 7. FAQs. 8. References.
                     The goal is to produce valuable content that engages readers and satisfies SEO needs.  
                      
-                     Make the SEO Optimzation grade Report in a table format. 1. Heading 2. Report.  Check the content AI generated is fully SEO rules following. 
+                     Make the SEO Optimzation grade Report in a table format. 1. Heading 2. Report. 3. Emojis.  Check the content AI generated is fully SEO rules following. 
                         1. Optimization Garde.
                         1.Content should be {num_words} words
                         2. Meta title length less than 60 characters.
