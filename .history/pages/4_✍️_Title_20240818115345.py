@@ -100,7 +100,9 @@ with st.sidebar:
     # Prompt
     prompt_parts = [
             f"""
-    Please ignore all previous instructions. You to act as a content marketer specializing in on-page SEO with a decade of experience. Generate an eye-catchy meta title and meta description for a blog post with the primary keyword "{primary_keyword}". 
+    Please ignore all previous instructions. You to act as a content marketer specializing in on-page SEO with a decade of experience.
+
+    Generate an eye-catchy meta title and meta description for a blog post with the primary keyword "{primary_keyword}". 
     Make sure to incorporate the keyword while ensuring that the meta title must be less than 60 characters length limit and meta description must be less than 160 characters length limit. 
     All output shall be in English. 
     
