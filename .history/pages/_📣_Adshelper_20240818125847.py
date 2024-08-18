@@ -177,7 +177,7 @@ with st.sidebar:
             Use machine learning algorithms to recommend the best time period for running the ads based on target audience behavior and preferences.
             This can include factors such as days of the week, times of day, and time zones.
             Provide more than one ad set if possible.
-            For each ad set, specify the ad placement platform (e.g. Facebook Ads , Instagram Ads, Tiktok Ads) based on the most relevant platform for the target audience identified. Don't add the Youtube, Twitter, or Google Ads platform.
+            For each ad set, specify the ad placement platform (e.g. Facebook Ads , Instagram Ads, Tiktok Ads) based on the most relevant platform for the target audience identified. 
             Consider utilizing programmatic advertising and real-time bidding to optimize ad placements and reach the right audience segments more efficiently.
             For each ad set, also include ad formats (e.g., image, video, carousel, story, collection) best suited for the respective ad placement platform and target audience preferences.
             Monitor ad performance and engagement metrics regularly, adjusting campaign strategies and ad sets as needed to improve overall results.
