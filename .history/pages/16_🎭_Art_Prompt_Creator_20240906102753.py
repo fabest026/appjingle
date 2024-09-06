@@ -105,9 +105,9 @@ with st.sidebar:
     
     # Add the Action Placeholder
     
-    # action_placeholder = "Action: Describe what the object is doing, or what you want it to do? Eg: drawing, painting, writing, etc. (optional)"
-    # action = st.text_input(action_placeholder)
-    # input_prompt = st.text_input("Input Prompt:", value="", key="input")
+    action_placeholder = "Action: Describe what the object is doing, or what you want it to do? Eg: drawing, painting, writing, etc. (optional)"
+    action = st.text_input(action_placeholder)
+    input_prompt = st.text_input("Input Prompt:", value="", key="input")
 
     image_placeholder = "Upload an image" 
     uploaded_file = st.file_uploader(image_placeholder, type=["jpg", "jpeg", "png"])
