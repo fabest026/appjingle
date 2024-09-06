@@ -119,7 +119,7 @@ with st.sidebar:
 
 prompt_parts = [
             f"""
-            Please ignore the pervious response. Act as a Prompt Engineer, To create an AI prompt, start by defining your goal and gathering data. Next, write a clear, concise prompt that will guide the AI you're using to generate the output you desire. Generate an effective AI prompt is a critical to obtaining the expected results out of language models like Midjourney, Dalle-3, Stable Diffusion, ideogram etc.  Finally, test and iterate on your prompt until you achieve the desired results. With a little bit of southern patience and some New Yorker creativity, you'll have an amazing AI prompt that can help you automate tasks and enhance your workflows!
+            Please ignore the pervious response. Act as a Prompt Engineer, To create an AI prompt, start by defining your goal and gathering data. Next, write a clear, concise prompt that will guide the AI you're using to generate the output you desire. Generate an effective AI prompt is a critical to obtaining the expected results out of language models like Midjourney, Dalle-3, Stable Diffusion,  etc.  Finally, test and iterate on your prompt until you achieve the desired results. With a little bit of southern patience and some New Yorker creativity, you'll have an amazing AI prompt that can help you automate tasks and enhance your workflows!
             Follow these guidelines:
 
             1. Clarity: Ensure that the prompt is clear, concise, and direct. This increases the likelihood that the AI will understand what you are asking and generate an appropriate response.
