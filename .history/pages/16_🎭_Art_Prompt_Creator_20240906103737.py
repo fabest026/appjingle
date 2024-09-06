@@ -84,8 +84,8 @@ with st.sidebar:
  
 with st.sidebar:
     
-    # description_keywords_placeholder = "Keyword: How would you like to describe the image (optional)"
-    # description_keywords = st.text_input(description_keywords_placeholder)
+    description_keywords_placeholder = "Keyword: How would you like to describe the image (optional)"
+    description_keywords = st.text_input(description_keywords_placeholder)
     
     # Add the photographic style
     
@@ -98,6 +98,15 @@ with st.sidebar:
     ratio_placeholder = "Ratio: ratio of the image"
     ratio = st.selectbox(ratio_placeholder, ["16:9", "4:3", "1:1", "3:4", "9:16", "1:2", "2:1"])
     
+    # Add the object Placeholder
+    
+    object_placeholder = "Object: identify the main object in the image Eg: person, dog, cat, etc."
+    object = st.text_input(object_placeholder)
+    
+    # Add the Action Placeholder
+    
+    action_placeholder = "Action: Describe what the object is doing, or what you want it to do? Eg: drawing, painting, writing, etc. (optional)"
+    action = st.text_input(action_placeholder)
     input_prompt = st.text_input("Input Prompt:", value="", key="input")
 
     image_placeholder = "Upload an image" 
@@ -121,7 +130,10 @@ prompt_parts = [
             6. Grammar and Spelling: Check your prompt for grammar and spelling mistakes. 
             
             Goal: {image_name if image_name else '(no uploaded file)'}
+            Topic: {description_keywords}
             Photographic Styles: {', '.join(photographic_style)}
+            Object: {object}
+            Action: {action}
             
             """
          
@@ -277,5 +289,3 @@ st.markdown(footer_html, unsafe_allow_html=True)
     
     
     
-
-
