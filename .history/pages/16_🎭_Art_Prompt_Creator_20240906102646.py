@@ -93,15 +93,15 @@ with st.sidebar:
     photographic_style = st.multiselect(photographic_style_placeholder, ["photo","illustration" , "3d render", "topography", "cinematic", "poster", "painting" , "fashion", "product", "anime", "architecture", "dark fantasy", "vibrant", "graffiti", "portrait phtography", "wildlife photography", "conceptual art", "ukiyo" ])
 
     
-    # # Add the ratio
+    # Add the ratio
     
-    # ratio_placeholder = "Ratio: ratio of the image"
-    # ratio = st.selectbox(ratio_placeholder, ["16:9", "4:3", "1:1", "3:4", "9:16", "1:2", "2:1"])
+    ratio_placeholder = "Ratio: ratio of the image"
+    ratio = st.selectbox(ratio_placeholder, ["16:9", "4:3", "1:1", "3:4", "9:16", "1:2", "2:1"])
     
-    # # Add the object Placeholder
+    # Add the object Placeholder
     
-    # object_placeholder = "Object: identify the main object in the image Eg: person, dog, cat, etc."
-    # object = st.text_input(object_placeholder)
+    object_placeholder = "Object: identify the main object in the image Eg: person, dog, cat, etc."
+    object = st.text_input(object_placeholder)
     
     # Add the Action Placeholder
     
@@ -133,7 +133,7 @@ prompt_parts = [
             Topic: {description_keywords}
             Photographic Styles: {', '.join(photographic_style)}
             # Object: {object}
-            # Action: {action}
+            Action: {action}
             
             """
          

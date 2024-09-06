@@ -93,21 +93,21 @@ with st.sidebar:
     photographic_style = st.multiselect(photographic_style_placeholder, ["photo","illustration" , "3d render", "topography", "cinematic", "poster", "painting" , "fashion", "product", "anime", "architecture", "dark fantasy", "vibrant", "graffiti", "portrait phtography", "wildlife photography", "conceptual art", "ukiyo" ])
 
     
-    # # Add the ratio
+    # Add the ratio
     
-    # ratio_placeholder = "Ratio: ratio of the image"
-    # ratio = st.selectbox(ratio_placeholder, ["16:9", "4:3", "1:1", "3:4", "9:16", "1:2", "2:1"])
+    ratio_placeholder = "Ratio: ratio of the image"
+    ratio = st.selectbox(ratio_placeholder, ["16:9", "4:3", "1:1", "3:4", "9:16", "1:2", "2:1"])
     
     # # Add the object Placeholder
     
     # object_placeholder = "Object: identify the main object in the image Eg: person, dog, cat, etc."
     # object = st.text_input(object_placeholder)
     
-    # Add the Action Placeholder
+    # # Add the Action Placeholder
     
-    action_placeholder = "Action: Describe what the object is doing, or what you want it to do? Eg: drawing, painting, writing, etc. (optional)"
-    action = st.text_input(action_placeholder)
-    input_prompt = st.text_input("Input Prompt:", value="", key="input")
+    # action_placeholder = "Action: Describe what the object is doing, or what you want it to do? Eg: drawing, painting, writing, etc. (optional)"
+    # action = st.text_input(action_placeholder)
+    # input_prompt = st.text_input("Input Prompt:", value="", key="input")
 
     image_placeholder = "Upload an image" 
     uploaded_file = st.file_uploader(image_placeholder, type=["jpg", "jpeg", "png"])
@@ -132,8 +132,6 @@ prompt_parts = [
             Goal: {image_name if image_name else '(no uploaded file)'}
             Topic: {description_keywords}
             Photographic Styles: {', '.join(photographic_style)}
-            # Object: {object}
-            # Action: {action}
             
             """
          
