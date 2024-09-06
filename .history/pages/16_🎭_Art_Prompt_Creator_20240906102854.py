@@ -132,6 +132,7 @@ prompt_parts = [
             Goal: {image_name if image_name else '(no uploaded file)'}
             Topic: {description_keywords}
             Photographic Styles: {', '.join(photographic_style)}
+           
             
             """
          
