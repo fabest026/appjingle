@@ -97,6 +97,8 @@ with st.sidebar:
     
     ratio_placeholder = "Ratio: ratio of the image"
     ratio = st.selectbox(ratio_placeholder, ["16:9", "4:3", "1:1", "3:4", "9:16", "1:2", "2:1"])
+    
+   
 
     image_placeholder = "Upload an image" 
     uploaded_file = st.file_uploader(image_placeholder, type=["jpg", "jpeg", "png"])
