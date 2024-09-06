@@ -130,6 +130,7 @@ prompt_parts = [
             6. Grammar and Spelling: Check your prompt for grammar and spelling mistakes. 
             
             Goal: {image_name if image_name else '(no uploaded file)'}
+            Topic: {description_keywords}
             Photographic Styles: {', '.join(photographic_style)}
             
             """
