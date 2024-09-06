@@ -128,7 +128,7 @@ prompt_parts = [
             4. Instruction: If you want a particular style or format for the response, specify this in the prompt. For instance, if you want a response in the form of a poem, bullet points, or formal language, indicate this.
             5. Open-ended vs. Closed-ended: If you're looking for creative or expansive responses, use open-ended questions. For more specific, concise answers, use closed-ended questions.
             6. Grammar and Spelling: Check your prompt for grammar and spelling mistakes.
-            7. Make the perfect short magic prompt of 4 lines.
+            7. Make the perfect short magic prompt of 4 lines
             
             Goal: {image_name if image_name else '(no uploaded file)'}
             Topic: {description_keywords}
