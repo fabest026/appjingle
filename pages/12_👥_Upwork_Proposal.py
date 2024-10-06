@@ -104,11 +104,12 @@ with st.sidebar:
     st.markdown("<h4>Enter Details: </h4>", unsafe_allow_html=True)
     
      # Title
-    
     name = st.text_input("Name (Your Name)")
+    # Client Title
+    client_name = st.text_input("Name (Client Name)")
     
     # Section Heading
-    job_title = st.text_input("Heading (Job Title)")
+    job_title = st.text_input("Heading (Profile Title)")
     
     # Add the Voice Tones
     voice_tones = st.sidebar.selectbox("Speaking Tones:", ["Formal", "Informal", "Friendly", "Bold", "Adventurous", "Witty", "Professional", "Casual", "Informative", "Creative", "Trendy", "Caring", "Cheerful", "Excited", "Funny", "Sad", "Serious", "Tense", "Vulnerable", "Angry", "Surprised", "Worried", "Assertive", "Confident", "Cooperative", "Encouraging" ])
@@ -179,14 +180,14 @@ with st.sidebar:
                 18. Follow this example pattern and also the wording like written below: 
 
                   **— Cover Letter Introduction —** 
-                    Hi [insert name of client]!
+                    Hi {client_name}!
                     
                     
                     Thank you so much for providing detailed information about your job. It instantly grabbed my attention and aligns perfectly with my experience as a [insert your job title].
                     
                     **— Provide an example of your work —** 
                     
-                    As you can view on my Upwork profile, I’ve completed numerous [insert job title] jobs with 5-star reviews, including overly positive client feedback. Two specific examples that showcase the quality of my work and relate directly to your job post are attached to this proposal for you.
+                    As you can view on my Upwork profile, I’ve completed numerous {job_title} jobs with 5-star reviews, including overly positive client feedback. Two specific examples that showcase the quality of my work and relate directly to your job post are attached to this proposal for you.
                     
                     **— Prove your credibility —**
                     Here’s what you should know about me:
@@ -214,9 +215,9 @@ with st.sidebar:
                     
                     Best Regards,
                     
-                    [Your Name]
+                    {name}
 
-                Here are some example proposals to follows and choose which example is best suitable for according to proposal description:
+                Here is example proposals to follows and choose which example is best suitable for according to proposal description:
 
                 Upwork proposal example #1:
                 
