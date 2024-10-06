@@ -183,7 +183,7 @@ with st.sidebar:
                     Hi {client_name}!
                     
                     
-                    Thank you so much for providing detailed information about your job. It instantly grabbed my attention and aligns perfectly with my experience as a [insert your job title].
+                    Thank you so much for providing detailed information about your job. It instantly grabbed my attention and aligns perfectly with my experience as a {job_title}.
                     
                     **— Provide an example of your work —** 
                     
