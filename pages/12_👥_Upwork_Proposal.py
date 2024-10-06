@@ -120,11 +120,13 @@ with st.sidebar:
     # Audience
     #audience = st.selectbox("Audience: Who is the target audience?", ["Teenager", "Adult", "20-years-old", "30-years-old",  "40-years-old", "50-years-old", "Senior", "Everyone", "Uninformed Audience", "Neutral Audience", "Business Audience", "Researcher", "Expert Audience", "My Boss", "My Student", "My Teacher", "My Family", "My Friends", "My Colleagues"] )
     
-    # Country
+    # Client Job Description
     description = st.text_area("Detail of Job (Description)")
-    #num_words = st.number_input("Number of words", min_value=250, max_value=3000, step=50)
+    
+      
+   # Profile Description
+   profile_description = st.text_area("Profile (Description)")
 
-   
 
     # Prompt
     prompt_parts = [
@@ -139,6 +141,9 @@ with st.sidebar:
 
                 The following is the job description:
                 {description}
+
+                The Followung is Profile description:
+                {profile_description}
 
                 Here are some essential points to note while writing an Upwork proposal:
                 - Writing an Upwork proposal requires skill and practice.
