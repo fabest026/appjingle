@@ -124,8 +124,6 @@ with st.sidebar:
     description = st.text_area("Detail of Job (Description)")
     
       
-   # Profile Description
-   profile_description = st.text_area("Profile (Description)")
 
 
     # Prompt
@@ -142,8 +140,7 @@ with st.sidebar:
                 The following is the job description:
                 {description}
 
-                The Followung is Profile description:
-                {profile_description}
+
 
                 Here are some essential points to note while writing an Upwork proposal:
                 - Writing an Upwork proposal requires skill and practice.
