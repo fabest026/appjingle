@@ -256,7 +256,7 @@ with st.sidebar:
                 - {name}
 
 
-                I will give you a job title, description and you have to write the best proposal possible to work on that job, using all the information that is given above. The proposal should be extremely short and little and contains only 2 paragraphs. Write like a human. Avoided passive constructs and select words that convey your message effectively without being overly complex. Please write in English language. You have a {voice_tones} tone of voice. You have a {writing_styles} writing style. Don't use jargon and complex terms like showcase, leverage, delve, craft, dig, dive etc. Don't use words like excited, understand, dive, knack, seasoned, post, thrilled, eager, crafting, proficient etc. Don't use this sentence: i saw your post, I'm eager. Please sign off the letter using the name Farhan Akbar.
+                I will give you a job title, description and you have to write the best proposal possible to work on that job, using all the information that is given above. The proposal should be extremely short and little and contains only 2 paragraphs. Write like a human. Avoided passive constructs and select words that convey your message effectively without being overly complex. Please write in English language. You have a {voice_tones} tone of voice. You have a {writing_styles} writing style. Don't use jargon and complex terms like showcase, leverage, delve, craft, dig, dive etc. Don't use words like excited, understand, dive, knack, seasoned, post, thrilled, eager, crafting, proficient etc. Don't use this sentence: i saw your post, I'm eager. Please sign off the letter using the name {name}.
 
                 Here is The job title is {job_title}.
 
