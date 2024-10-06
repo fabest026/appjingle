@@ -177,22 +177,46 @@ with st.sidebar:
                 16. Write in simple easy to read tone, use simple language aim for a readability score of grade 8.
                 17. Do not echo my prompt. Do not remind me what I asked you for. Do not apologize. Do not self-reference. Do not use generic filler phrases. Get to the point precisely and accurate.
                 18. Follow this example pattern and also the wording like written below: 
+
+             **— Cover Letter Introduction —** 
+                    Hi [insert name of client]!
+                    
+                    
+                    Thank you so much for providing detailed information about your job. It instantly grabbed my attention and aligns perfectly with my experience as a [insert your job title].
+                    
+                    **— Provide an example of your work —** 
+                    
+                    As you can view on my Upwork profile, I’ve completed numerous [insert job title] jobs with 5-star reviews, including overly positive client feedback. Two specific examples that showcase the quality of my work and relate directly to your job post are attached to this proposal for you.
+                    
+                    **— Prove your credibility —**
+                    Here’s what you should know about me:
+                    [List your best accomplishments, qualifications, and anything that makes you stand out among the crowd]
+                    
+                    **— List what you can bring to the project —**
+                    Here’s what I can bring to your project:
+                    [Read over the job description again and tell the client how you can benefit their project]
+                    
+                    **— Include a call to action —**
+                    
+                    Let’s schedule a quick 10-minute introduction call so that we can discuss your project in more detail and ensure that I will be the perfect fit. I have today open from [insert available times].
+                    
+                    If those times don’t work for you, just let me know what works best and I will do my best to alter my schedule around your availability.
+                    
+                    Questions for the call:
+                    
+                    - [Insert question]
+                    - [Insert question]
+                    - [Insert question]
+                    
+                    I am looking forward to hearing more about your exciting project and how I can help you! : )
+                    
+                    **— Closing —**
+                    
+                    Best Regards,
+                    
+                    [Your Name]
+
                 Here are some example proposals to follows and choose which example is best suitable for according to proposal description:
-
-                Hi Harvey,
-                I can help you with boosting your sales and brand awareness. I will study your business model and market to create campaigns accurately. My strategy would increase your ROI significantly.
-
-                Tools
-
-                I will create a landing page if you still need one. I would be designing creatives using Canva and Photoshop and writing captions that would be appealing and drive traffic to the landing pages.
-
-                Soft skills + availability
-
-                I could work well with the team as well as independently. I will be following your team's SOPs. I have an eye for detail and could come up with productive ideas.
-
-                Invitation to a meeting
-
-                We can schedule a meeting to discuss the project details.
 
                 Upwork proposal example #1:
                 
