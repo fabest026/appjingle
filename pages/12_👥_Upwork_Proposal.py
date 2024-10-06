@@ -123,20 +123,21 @@ with st.sidebar:
     description = st.text_area("Detail of Job (Description)")
     #num_words = st.number_input("Number of words", min_value=250, max_value=3000, step=50)
 
-    # Primary Keyword
-    #primary_keyword = st.text_input("Primary Keyword ")
-    
-    # Secondary Keyword
-    #secondary_keyword = st.text_input("Secondary Keyword")
-    
-    # Reference Article Link
-    # reference_article_link = st.text_input("Reference Article Link")
+   
 
     # Prompt
     prompt_parts = [
         
             f""" 
-            Your name is {name}, you are the most successful freelancer on Upwork. You make proposals to work on jobs that others have posted on Upwork and always get chosen by the job poster in a tough competition. You write such a great proposal that it always gets selected out of the other 50 proposals.
+               Please ignore all previous instructions. I want you to respond only in English. Your name is {name}, you are the most successful freelancer on Upwork. You make proposals to work on jobs that others have posted on Upwork and always get chosen by the job poster in a tough competition. You write such a great proposal that it always gets selected out of the other 50 proposals.
+               I want you to act as a very proficient Professional Freelancer and a great problem solver that speaks and writes fluent English. I want you to pretend that you know how to win a job on Upwork very well and you are a professional in this work.
+               Writing some catchy first few lines is vital to ensuring your proposal doesn't get ignored. Clients can only see the first two lines of your proposal unless they click to expand it, so you have to write something compelling if you want to stand out. Let the employer know how you will complete the job. The first few sentences should confirm that you fully understand what the client needs. Your proposal doesn't need to be lengthy as long as it confirms you understand the problem and shows that you can solve it. Always aim for brief, clean, and concise writing. Typically, everything you need can be expressed in three short paragraphs.
+               I will give you a job title, description and you have to write the best proposal possible to work on that job, using all the information that is given above. The proposal should be extremely short and little and contains only 2 paragraphs. Write like a human. Avoided passive constructs and select words that convey your message effectively without being overly complex. Please write in English language. You have a {voice_tones} tone of voice. You have a {writing_styles} writing style. Don't use jargon and complex terms like showcase, leverage, delve, craft, dig, dive etc. Don't use words like excited, understand, dive, knack, seasoned, post, thrilled, eager, crafting, proficient etc. Don't use this sentence: i saw your post, I'm eager. Please sign off the letter using the name {name}.
+            
+                Here is The job title is {job_title}.
+
+                The following is the job description:
+                {description}
 
                 Here are some essential points to note while writing an Upwork proposal:
                 - Writing an Upwork proposal requires skill and practice.
@@ -159,9 +160,39 @@ with st.sidebar:
                 - Strike a balance between being professional and personable in your writing.
                 - Avoid being too casual or overly formal in your tone.
                 - Find the middle ground to connect with the client effectively and leave a positive impression.
-
-
+                1. So write it to follow this format: Solutions (First paragraph).
+                2. Tools (Second paragraph)
+                3. Soft skills + availability (Third paragraph)
+                4. Invitation to a meeting (Call to action)
+                6. Write like a human. Avoided passive constructs and select words that convey your message effectively without being overly complex.
+                7. You have a {voice_tones} tone of voice. You have a {writing_styles} writing style.
+                8. Don't use jargon and complex terms like showcase, leverage, delve, craft etc.
+                9. Focus first on creating high quality, thorough content that provides value to readers.
+                10. Keep Your Paragraphs Short: Aim for about five sentences per paragraph. This helps in maintaining a clear and concise structure, making it easier for readers to follow.
+                11. Choose Your Words Carefully: Utilize action words to keep the narrative dynamic and engaging. Avoid passive constructs and select words that convey your message effectively without being overly complex.
+                12. Shorten Your Sentences: Restrict sentence length to 10-15 words. This simplifies the information and aids comprehension. Avoid lengthy sentences that could confuse or deter your audience.
+                13. Keep it Simple: Use straightforward language. Opt for simpler words when possible (e.g., use "small" instead of "minuscule"). This prevents the text from being pretentious and maintains the reader's focus.
+                14. Break it Up: Organize your content into digestible sections. Use headings and subheadings to divide text and guide the reader through your article. Consider splitting complex topics into multiple posts or a series for easier consumption and sustained engagement.
+                15. Write for Your Audience, Not for Your Score: Always prioritize your reader's needs and interests over adhering strictly to readability scores or SEO guidelines. If the content requires complexity for clarity or depth, adjust your style accordingly.
+                16. Write in simple easy to read tone, use simple language aim for a readability score of grade 8.
+                17. Do not echo my prompt. Do not remind me what I asked you for. Do not apologize. Do not self-reference. Do not use generic filler phrases. Get to the point precisely and accurate.
+                18. Follow this example pattern and also the wording like written below: 
                 Here are some example proposals to follows and choose which example is best suitable for according to proposal description:
+
+                Hi Harvey,
+                I can help you with boosting your sales and brand awareness. I will study your business model and market to create campaigns accurately. My strategy would increase your ROI significantly.
+
+                Tools
+
+                I will create a landing page if you still need one. I would be designing creatives using Canva and Photoshop and writing captions that would be appealing and drive traffic to the landing pages.
+
+                Soft skills + availability
+
+                I could work well with the team as well as independently. I will be following your team's SOPs. I have an eye for detail and could come up with productive ideas.
+
+                Invitation to a meeting
+
+                We can schedule a meeting to discuss the project details.
 
                 Upwork proposal example #1:
                 
@@ -255,92 +286,7 @@ with st.sidebar:
 
                 - {name}
 
-
-                I will give you a job title, description and you have to write the best proposal possible to work on that job, using all the information that is given above. The proposal should be extremely short and little and contains only 2 paragraphs. Write like a human. Avoided passive constructs and select words that convey your message effectively without being overly complex. Please write in English language. You have a {voice_tones} tone of voice. You have a {writing_styles} writing style. Don't use jargon and complex terms like showcase, leverage, delve, craft, dig, dive etc. Don't use words like excited, understand, dive, knack, seasoned, post, thrilled, eager, crafting, proficient etc. Don't use this sentence: i saw your post, I'm eager. Please sign off the letter using the name {name}.
-
-                Here is The job title is {job_title}.
-
-                The following is the job description:
-                {description} 
-                
-                Please ignore all previous instructions. I want you to respond only in English. I want you to act as a very proficient Professional Freelancer and a great problem solver that speaks and writes fluent English. I want you to pretend that you know how to win a job on Upwork very well and you are a professional in this work.
-            Writing some catchy first few lines is vital to ensuring your proposal doesn't get ignored. Clients can only see the first two lines of your proposal unless they click to expand it, so you have to write something compelling if you want to stand out. Let the employer know how you will complete the job. The first few sentences should confirm that you fully understand what the client needs. Your proposal doesn't need to be lengthy as long as it confirms you understand the problem and shows that you can solve it. Always aim for brief, clean, and concise writing. Typically, everything you need can be expressed in three short paragraphs.
-            Here is The job title is {job_title}.
-            Here is the full text of the job listing: {description}.
-            Here is the instructions:
-            1. So write it to follow this format: Solutions (First paragraph).
-            2. Tools (Second paragraph)
-            3. Soft skills + availability (Third paragraph)
-            4. Invitation to a meeting (Call to action)
-            6. Write like a human. Avoided passive constructs and select words that convey your message effectively without being overly complex.
-            7. You have a {voice_tones} tone of voice. You have a {writing_styles} writing style.
-            8. Don't use jargon and complex terms like showcase, leverage, delve, craft etc.
-            9. Focus first on creating high quality, thorough content that provides value to readers.
-            10. Keep Your Paragraphs Short: Aim for about five sentences per paragraph. This helps in maintaining a clear and concise structure, making it easier for readers to follow.
-            11. Choose Your Words Carefully: Utilize action words to keep the narrative dynamic and engaging. Avoid passive constructs and select words that convey your message effectively without being overly complex.
-            12. Shorten Your Sentences: Restrict sentence length to 10-15 words. This simplifies the information and aids comprehension. Avoid lengthy sentences that could confuse or deter your audience.
-            13. Keep it Simple: Use straightforward language. Opt for simpler words when possible (e.g., use "small" instead of "minuscule"). This prevents the text from being pretentious and maintains the reader's focus.
-            14. Break it Up: Organize your content into digestible sections. Use headings and subheadings to divide text and guide the reader through your article. Consider splitting complex topics into multiple posts or a series for easier consumption and sustained engagement.
-            15. Write for Your Audience, Not for Your Score: Always prioritize your reader's needs and interests over adhering strictly to readability scores or SEO guidelines. If the content requires complexity for clarity or depth, adjust your style accordingly.
-            16. Write in simple easy to read tone, use simple language aim for a readability score of grade 8.
-            17. Do not echo my prompt. Do not remind me what I asked you for. Do not apologize. Do not self-reference. Do not use generic filler phrases. Get to the point precisely and accurate.
-            18. Follow this example pattern and also the wording like written below: 
-               
-               Solutions
-
-                Hi Harvey,
-                I can help you with boosting your sales and brand awareness. I will study your business model and market to create campaigns accurately. My strategy would increase your ROI significantly.
-
-                Tools
-
-                I will create a landing page if you still need one. I would be designing creatives using Canva and Photoshop and writing captions that would be appealing and drive traffic to the landing pages.
-
-                Soft skills + availability
-
-                I could work well with the team as well as independently. I will be following your team's SOPs. I have an eye for detail and could come up with productive ideas.
-
-                Invitation to a meeting
-
-                We can schedule a meeting to discuss the project details.
-
-                Hi Mark!
-
-                Thank you so much for providing detailed information about your job.
-                
-                It instantly grabbed my attention and aligns perfectly with my experience as a Senior SQL Server DBA. I’ve solved customer-facing SQL Server bottlenecks for fortune 500 companies and prominent clientele including Oracle Cerner, CBRE, and Stanford University.
-                
-                As you can view on my Upwork profile, I’ve completed numerous SQL Server DBA jobs with 5-star reviews, including overly positive feedback. Two specific examples that showcase the quality of my work and relate directly to your post are attached to this proposal for you as well.
-                
-                Here’s what you should know about me:
-                
-                I have been a Senior SQL Server DBA for over 9 years, working on a vast variety of challenging projects in numerous industries. As an expert-vetted freelancer, I’m in the top 1% of all freelancers on Upwork and I’ve personally been featured on the website home page (see attachment).
-                
-                I also have a YouTube channel (Josh Burns Tech) with over 100,000 subscribers, where I share my knowledge in freelancing and personal finance.
-                
-                Here’s what I can bring to your project:
-                
-                - Top-notch experience in all versions of SQL Server (2000 – 2019)
-                - Extensive experience working with large transactional databases
-                - Understanding of data security best practices when working with PII and PHI data
-                - 24/7 ultra-reliable communication: you will always be aware of the project status
-                - Someone who cares about helping you succeed and bringing value to your organization
-                
-                Let’s schedule a quick 10-minute introduction call so that we can discuss your project in more detail and ensure that I will be the perfect fit. I have tomorrow open from 10 AM – 1 PM EDT and after 3 PM EDT.
-                
-                If those times don’t work, just let me know what works best for you and I will do my best to alter my schedule around your availability.
-                
-                Questions to cover on the call:
-                
-                - What are your biggest pain points for customer complaints?
-                - Do you have different environments for production, development, and/or testing?
-                - Do you have any current automated database maintenance jobs?
-                
-                I am looking forward to hearing more about your exciting project and how I can help you! : )
-                
-                Best Regards,
-                
-                Joshua Burns
-                Expert-Vetted Freelancer (Top 1%)
+        
          
          
          Please write the proposal strictly according to above instructions and examples mentioned above. Please make the 5 variations of the proposal with mix of Upwork proposal styles and tones and examples. Write like a proficient Professional Freelancer and a great problem solver that speaks and writes fluent English.
