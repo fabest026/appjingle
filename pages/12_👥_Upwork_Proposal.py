@@ -178,7 +178,7 @@ with st.sidebar:
                 17. Do not echo my prompt. Do not remind me what I asked you for. Do not apologize. Do not self-reference. Do not use generic filler phrases. Get to the point precisely and accurate.
                 18. Follow this example pattern and also the wording like written below: 
 
-             **— Cover Letter Introduction —** 
+                  **— Cover Letter Introduction —** 
                     Hi [insert name of client]!
                     
                     
@@ -258,60 +258,6 @@ with st.sidebar:
                 
                 Joshua Burns
                 Expert-Vetted Freelancer (Top 1%)
-
-
-                Upwork proposal example #1:
-
-                Hi,
-
-                I would love to be your freelance writer and help you execute your website content strategy.
-
-                I have 5 years of experience writing content for websites, including Forbes.com, Buzzfeed.com, and more. Below, I've linked two samples that showcase my writing ability in a similar niche to your brand. As you can see, I understand your audience and know how to write compelling articles to get your website visitors to purchase your products.
-
-                I can complete 1,000-word articles with a 2-day turnaround time. Would that work for your needs? Let me know if my writing meets your expectations, and we can set up a time to talk about your project in more detail.
-
-                Example Website Content #1 (link)
-
-                Example Website Content #2 (link)
-
-                Thanks,
-                {name}
-
-                ---
-
-                Upwork proposal example #2:
-
-                Hello,
-
-                If you need high-quality articles written for your website at an affordable price, I am the right writer for you! My goal with every content piece is to lead your website's visitors along their buyer's journey—hopefully ending with a purchase on your website.
-
-                As you can see in my Upwork profile, I have three years of experience writing content for websites just like yours. You can even find some of my published work on Inc.com, Marketwatch.com, and Hubspot.com. Linked below are two writing samples that demonstrate my ability to craft excellent blog content for B2B e-commerce websites.
-
-                - Example Website Article #1
-
-                - Example Website Article #2
-
-                My current turnaround time for 1,000-word articles is two days. If my work aligns with what you need, can we set up a time to discuss your goals for this project?
-
-                Best regards,
-                {name}
-
-                ---
-
-                Upwork proposal example #3:
-
-                Hello Nicki,
-
-                I'm a detail-driven writer who turns ideas into valuable website content for clients just like you. I enjoy writing for various topics and niches (business, lifestyle, travel, personal blogs, etc.). You can find examples of my past writing work on my Upwork profile, plus (insert link here) and (insert link here).
-
-                My experience has given me a deep understanding of SEO writing and strong digital marketing strategies to help drive traffic to your site. I excel in writing all types of content such as blogs, press releases, product descriptions, and more.
-
-                My rate is $50 for projects like this one, and I can have a finished piece of writing delivered to you this week if you're interested. Let's talk!
-
-                - {name}
-
-        
-         
          
          Please write the proposal strictly according to above instructions and examples mentioned above. Please make the 5 variations of the proposal with mix of Upwork proposal styles and tones and examples. Write like a proficient Professional Freelancer and a great problem solver that speaks and writes fluent English.
             """
