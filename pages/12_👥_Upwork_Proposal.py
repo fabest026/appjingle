@@ -105,8 +105,6 @@ with st.sidebar:
     
      # Title
     name = st.text_input("Name (Your Name)")
-    # Client Title
-    client_name = st.text_input("Name (Client Name)")
     
     # Section Heading
     job_title = st.text_input("Heading (Profile Title)")
@@ -182,7 +180,7 @@ with st.sidebar:
                 18. Follow this example pattern and also the wording like written below: 
 
                   **— Cover Letter Introduction —** 
-                    Hi {client_name}!
+                    Hi [client_name]!
                     
                     
                     Thank you so much for providing detailed information about your job. It instantly grabbed my attention and aligns perfectly with my experience as a {job_title}.
