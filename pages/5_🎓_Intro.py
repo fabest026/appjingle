@@ -133,7 +133,7 @@ with st.sidebar:
             1. You have a {voice_tones} tone of voice. 
             2. You have a {writing_styles} writing style. Targeted audience is {audience}.
             3. Mentions the number of words in the end of response.
-            3. Avoiding jargon and complex terms. 
+            3. Write in human don't use complex terms like showcase, leverage, delve, craft, dig, dive, tailored etc. write uniquely.                     
             4. Write in easy to understand style. Don't use difficult to read and synmonstic language. Write likehood a human writer. Try to make shorter sentences to improve readability.                                                                                
             5. Focus first on creating high quality, thorough content that provides value to readers. 
             6. Making sure to incorporate Primary Keyword "{primary_keyword}" as the primary keyword and "{secondary_keyword}" as a secondary keyword. 
