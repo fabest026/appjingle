@@ -134,7 +134,9 @@ with st.sidebar:
             2. You have a {writing_styles} writing style. Targeted audience is {audience}.
             3. Mentions the number of words in the end of response.
             3. Write in human don't use complex terms like showcase, leverage, delve, craft, dig, dive, tailored etc. write uniquely.                     
-            4. Write in easy to understand style. Don't use difficult to read and synmonstic language. Write likehood a human writer. Try to make shorter sentences to improve readability.                                                                                
+            4. Write in easy to understand style. Don't use difficult to read and synmonstic language.                                                                                  
+            5. Use transition words in sentences
+	    5. Must be to make shorter sentences to improve readability.                                                                                                                                                                                    
             5. Focus first on creating high quality, thorough content that provides value to readers. 
             6. Making sure to incorporate Primary Keyword "{primary_keyword}" as the primary keyword and "{secondary_keyword}" as a secondary keyword. 
 	    7. Your introduction should grab the reader's attention, provide context, and give a brief overview of what they can expect to learn from the post. 
