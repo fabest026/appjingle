@@ -25,6 +25,8 @@ model = genai.GenerativeModel(
 )
 
 
+
+
 # Navbar
 st.set_page_config(
     page_title="Rewriter",

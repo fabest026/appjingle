@@ -24,6 +24,11 @@ model = genai.GenerativeModel(
   generation_config=generation_config,
 )
 
+chat_session = model.start_chat(
+  history=[
+  ]
+)
+
 
 # Navbar
 st.set_page_config(
