@@ -111,12 +111,15 @@ with st.sidebar:
     # Add the Voice Tones
     voice_tones = st.sidebar.selectbox("Choose Voice Tones:", ["Formal", "Informal", "Friendly", "Bold", "Adventurous", "Witty", "Professional", "Casual", "Informative", "Creative", "Trendy", "Caring", "Cheerful", "Excited", "Funny", "Sad", "Serious", "Tense", "Vulnerable", "Angry", "Surprised", "Worried", "Assertive", "Confident", "Cooperative", "Encouraging" ])
     
-    # Add the Writing Styles
-    writing_styles = st.sidebar.selectbox("Choose Writing Styles:", ["Academic", "Conversational", "Creative", "Critical", "Descriptive", "Instructive", "Technical", "Analytical","Business", "Causal", "Emotional", "Expository", "Formal", "Informal", "Legal", "Medical", "Poetic", "Persuasive"])
-    
+    # Add the Writing Styles                                                                                                                     
+  
+    writing_styles = st.sidebar.selectbox("Choose Writing Styles:", ["Academic", "Conversational", "Creative", "Critical", "Descriptive", "Instructive", "Technical", "Analytical", "Business", "Causal", "Emotional", "Expository", "Formal", "Informal", "Legal", "Medical", "Poetic", "Persuasive"])                                                                                                                                                                
+  
     # Audience
-    audience = st.selectbox("Audience: Who is the target audience?", ["Teenager", "Adult", "20-years-old", "30-years-old",  "40-years-old", "50-years-old", "Senior", "Everyone", "Uninformed Audience", "Neutral Audience", "Business Audience", "Researcher", "Expert Audience", "My Boss", "My Student", "My Teacher", "My Family", "My Friends", "My Colleagues"] )
-    
+    audience = st.multiselect(
+        "Audience: Who are the target audiences?",
+        ["Pet owners", "Animal lover", "Teenager", "Adult", "20-years-old", "30-years-old",  "40-years-old", "50-years-old", "Senior", "Everyone", "Uninformed Audience", "Neutral Audience", "Business Audience", "Researcher", "Expert Audience", "My Boss", "My Student", "My Teacher", "My Family", "My Friends", "My Colleagues"]
+    )    
     # Word Counter
     word_count = st.number_input("Word Count", min_value=250, max_value=3000, step=100)
     
@@ -130,8 +133,10 @@ with st.sidebar:
             1. You have a {voice_tones} tone of voice. 
             2. You have a {writing_styles} writing style. Targeted audience is {audience}.
             3. Mentions the number of words in the end of response.
-            3. Avoiding jargon and complex terms.
-            4. Write in easy to understand style. Don't use difficult to read and synmonstic language. Write likehood a human writer.
+            3. Write in human don't use complex terms like showcase, leverage, delve, craft, dig, dive, tailored etc. write uniquely.                     
+            4. Write in easy to understand style. Don't use difficult to read and synmonstic language.                                                                                  
+            5. Use more transition words in sentences.
+	    5. Must be to make shorter sentences to improve readability.                                                                                                                                                                                    
             5. Focus first on creating high quality, thorough content that provides value to readers. 
             6. Making sure to incorporate Primary Keyword "{primary_keyword}" as the primary keyword and "{secondary_keyword}" as a secondary keyword. 
 	    7. Your introduction should grab the reader's attention, provide context, and give a brief overview of what they can expect to learn from the post. 
