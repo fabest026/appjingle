@@ -112,8 +112,6 @@ with st.sidebar:
     # Secondary Keywords
     secondary_keywords = st.text_input("Secondary Keyword", placeholder="enter secondary keyword")
     
-    # Input Section
-    input_section = st.text_area("Input Section", height=300)
     
    
     

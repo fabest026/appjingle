@@ -112,9 +112,11 @@ with st.sidebar:
     # Secondary Keywords
     secondary_keywords = st.text_input("Secondary Keyword", placeholder="enter secondary keyword")
     
+/*************  ✨ Codeium Command ⭐  *************/
     # Input Section
     input_section = st.text_area("Input Section", height=300)
     
+/******  f9705005-d923-4d30-b22c-c35e1e8be640  *******/
    
     
     # Add the Voice Tones
