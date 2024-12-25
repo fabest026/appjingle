@@ -122,7 +122,7 @@ with st.sidebar:
     # Prompt
     prompt_parts = [
             f"""
-                 Please ignore all previous instructions. {input_section} paraphrase it 100% unique, free from any plagiarism, AI detection-free. Write in {language}. Please only paraphrase the provided text.
+                 Please ignore all previous instructions. {input_section} paraphrase it 100% unique, free from any plagiarism, AI detection-free. Write in {language}. Please only paraphrase the prvoided text.
             """
             ]
 
