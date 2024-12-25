@@ -28,7 +28,7 @@ model = genai.GenerativeModel(
 # Navbar
 st.set_page_config(
     page_title="Rewriter",
-    page_icon="🔥",
+    page_icon="",
     layout="centered",
     initial_sidebar_state="collapsed",
 )
