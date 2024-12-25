@@ -10,25 +10,6 @@ import os
 # Configure Google API key
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
-# Set up the Model
-generation_config = {
-  "temperature": 1,
-  "top_p": 0.95,
-  "top_k": 64,
-  "max_output_tokens": 8192
-}
-
-safety_settings = [
-    {
-        "category": "HARM_CATEGORY_HARASSMENT",
-        "threshold": "BLOCK_MEDIUM_AND_ABOVE"
-    },
-    {
-        "category": "HARM_CATEGORY_HATE_SPEECH",
-        "threshold": "BLOCK_MEDIUM_AND_ABOVE"
-    },
-    {
-        "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
         "threshold": "BLOCK_MEDIUM_AND_ABOVE"
 },
     {
@@ -100,9 +81,7 @@ with st.sidebar:
     # Prompt
     prompt_parts = [
             f"""
-    Please ignore all previous instructions. You to act as a content marketer specializing in on-page SEO with a decade of experience.
-
-    Generate an eye-catchy meta title and meta description for a blog post with the primary keyword "{primary_keyword}". 
+    Please ignore all previous instructions. You to act as a content marketer specializing in on-page SEO with a decade of experience. Generate an eye-catchy meta title and meta description for a blog post with the primary keyword "{primary_keyword}". 
     Make sure to incorporate the keyword while ensuring that the meta title must be less than 60 characters length limit and meta description must be less than 160 characters length limit. 
     All output shall be in English. 
     
@@ -119,7 +98,7 @@ with st.sidebar:
     7. Headlines that are about 55 characters long will display fully in search results and tend to get more clicks.
     7. Headlines are more likely to be clicked on in search results if they have about 6 words.
     8. Positive headlines tend to get better engagement than neutral or negative ones.
-    Headlines that are lists and how-to get more engagement on average than other types of headlines.
+    9. Headlines that are lists and how-to get more engagement on average than other types of headlines.
     8. Headlines that are lists and how-to get more engagement on average than other types of headlines.
     9. Headline will be more compelling and attract more clicks if you add more emotional and power words.
     1. Beginning and Ending Words must be in the meta title and meta description. Most readers only look at the first and last 3 words of a headline before deciding whether to click.
