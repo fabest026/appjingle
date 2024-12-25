@@ -10,39 +10,18 @@ import os
 # Configure Google API key
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
-# Set up the Model
+# Create the model
 generation_config = {
   "temperature": 1,
   "top_p": 0.95,
-  "top_k": 64,
-  "max_output_tokens": 8192
+  "top_k": 40,
+  "max_output_tokens": 8192,
+  "response_mime_type": "text/plain",
 }
 
-safety_settings = [
-    {
-        "category": "HARM_CATEGORY_HARASSMENT",
-        "threshold": "BLOCK_MEDIUM_AND_ABOVE"
-    },
-    {
-        "category": "HARM_CATEGORY_HATE_SPEECH",
-        "threshold": "BLOCK_MEDIUM_AND_ABOVE"
-    },
-    {
-        "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
-        "threshold": "BLOCK_MEDIUM_AND_ABOVE"
-},
-    {
-        "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
-        "threshold": "BLOCK_MEDIUM_AND_ABOVE"
-    },
-]
-
-# Load Gemini Pro model
 model = genai.GenerativeModel(
-  model_name="gemini-1.5-flash",
+  model_name="gemini-2.0-flash-exp",
   generation_config=generation_config,
-  # safety_settings = Adjust safety settings
-  # See https://ai.google.dev/gemini-api/docs/safety-settings
 )
 
 # Navbar
@@ -134,9 +113,9 @@ with st.sidebar:
             8. Headlines are more likely to be clicked on in search results if they have about 6 words.
             9. Headlines that are lists and how-to get more engagement on average than other types of headlines.
             10. Headline will be more compelling and attract more clicks if you add more emotional and power words.
-	        11. 20 engaging headings and subheadings 
-	        12. Strictly say that Secondary keyowrd also add in h3 and h4 only one time.
-	        13. Only incorpoted the primary keyword 2 times in outlines. This strict order follow it.
+	        11. {num_headings} engaging headings and subheadings 
+	        12. Strictly say that Secondary keyword also add in h3 and h4 only one time.
+	        13. Only incorporated the primary keyword 2 times in outlines. This strict order follow it.
 		    14. Identify the key sections of the article and create H3 headings for each section that are both descriptive and engaging. 
 		    15. Use H4 subheadings as needed to break down each section into smaller, more specific topics.
             """
