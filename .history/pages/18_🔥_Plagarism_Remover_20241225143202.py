@@ -122,7 +122,10 @@ with st.sidebar:
     # Prompt
     prompt_parts = [
             f"""
+/*************  ✨ Codeium Command 🌟  *************/
                  Please disregard all earlier directives. Please paraphrase the provided {input_section} into a completely original piece, maintaining its essence and coherence, in the language {language}. Ensure the rephrased content is free from plagiarism and difficult for AI to detect, without extending its length. Write in human don't use complex terms like showcase, leverage, delve, craft, dig, dive, tailored etc. and write uniquely.
+                 Please disregard all earlier directives. Please paraphrase the provided {input_section} into a completely original piece, maintaining its essence and coherence, in the language {language}. Ensure the rephrased content is free from plagiarism and difficult for AI to detect, without extending its length.
+/******  4a7aee91-9adb-4c27-b87f-118ed9aa7db6  *******/
             """
             ]
 
