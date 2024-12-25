@@ -108,7 +108,7 @@ with st.sidebar:
     num_headings = st.number_input("Number of Headings", min_value=8, max_value=20, step=1)
     
     # Language
-    language = st.selectbox("Language", ["English", "French", "Spanish", "German", "Italian", "Portuguese", "Dutch", "Russian", "Chinese (Simplified)", "Japanese", "Korean", "Urdu"])
+    language = st.selectbox("Language", ["English", "French", "Spanish", "German", "Italian", "Portuguese", "Dutch", "Russian", "Chinese (Simplified)", "Japanese", "Korean"])
     
     # Secondary Keyword
     #secondary_keyword = st.text_input("Secondary Keyword")
@@ -120,7 +120,7 @@ with st.sidebar:
     prompt_parts = [
             f"""
                 Forget all previous instructions.
-                    Assume the role of a proficient article writer fluent in {language}. Your task is to compose a {num_words}-word article on focus keyword "{focus_keyword}" that effectively capture the attention of the {audience} audience. Also SEO Optimize this article for Primary keyword {primary_keyword} and Secondary Keywords  {secondary_keywords}.
+                    Assume the role of a proficient article writer fluent in English. Your task is to compose a {num_words}-word article on focus keyword "{focus_keyword}" that effectively capture the attention of the {audience} audience. Also SEO Optimize this article for Primary keyword {primary_keyword} and Secondary Keywords  {secondary_keywords}.
                     Here are the instructions to follow:
 
                     1. Use a {voice_tones} tone using {writing_styles} writing style.

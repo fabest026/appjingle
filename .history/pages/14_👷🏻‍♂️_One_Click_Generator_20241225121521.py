@@ -108,7 +108,7 @@ with st.sidebar:
     num_headings = st.number_input("Number of Headings", min_value=8, max_value=20, step=1)
     
     # Language
-    language = st.selectbox("Language", ["English", "French", "Spanish", "German", "Italian", "Portuguese", "Dutch", "Russian", "Chinese (Simplified)", "Japanese", "Korean", "Urdu"])
+    language = st.selectbox("Language", ["English", "French", "Spanish", "German", "Italian", "Portuguese", "Dutch", "Russian", "Chinese (Simplified)", "Japanese", "Korean"])
     
     # Secondary Keyword
     #secondary_keyword = st.text_input("Secondary Keyword")
