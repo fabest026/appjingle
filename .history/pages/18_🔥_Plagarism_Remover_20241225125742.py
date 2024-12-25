@@ -27,7 +27,7 @@ model = genai.GenerativeModel(
 
 # Navbar
 st.set_page_config(
-    page_title="Rewriter",
+    page_title="PlagarismRemover",
     page_icon="🔥",
     layout="centered",
     initial_sidebar_state="collapsed",
@@ -36,7 +36,7 @@ st.set_page_config(
 # Add the Title
 st.markdown(
     "<h1 style='text-align: center; color: black;'>"
-    "✨ Rewriter ✨"
+    "✨ Plagarism_Remover ✨"
     "</h1>",
     unsafe_allow_html=True
 )
