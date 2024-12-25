@@ -122,7 +122,7 @@ with st.sidebar:
     # Prompt
     prompt_parts = [
             f"""
-                 Please disregard all earlier directives. Please paraphrase the provided {input_section} into a completely original piece, maintaining its essence and coherence. Ensure the rephrased content is free from plagiarism and difficult for AI to detect, without extending its length.
+                 Please disregard all earlier directives. Please reparaphrase the provided {input_section} into a completely original piece, maintaining its essence and coherence. Ensure the rephrased content is free from plagiarism and difficult for AI to detect, without extending its length.
             """
             ]
 
