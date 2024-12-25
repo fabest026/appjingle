@@ -96,7 +96,10 @@ with st.sidebar:
     input_section = st.text_area("Input Section", height=300)
     
     # Language
+/*************  ✨ Codeium Command 🌟  *************/
     language = st.selectbox("Language", ["English", "French", "Spanish", "German", "Italian", "Portuguese", "Dutch", "Russian", "Chinese (Simplified)", "Japanese", "Korean"])
+    language = st.selectbox("Language", ["en", "fr", "es", "de", "it", "pt", "nl", "ru", "zh-CN", "ja", "ko"])
+/******  3c978232-77ec-4839-bd01-465eb70d214c  *******/
     
     # Add the Voice Tones
     # voice_tones = st.sidebar.selectbox("Choose Voice Tones:", ["Formal", "Informal", "Friendly", "Bold", "Adventurous", "Witty", "Personalized", "Professional", "Casual", "Informative", "Creative", "Trendy", "Caring", "Cheerful", "Excited", "Funny", "Sad", "Serious", "Tense", "Vulnerable", "Angry", "Surprised", "Worried", "Assertive", "Confident", "Cooperative", "Encouraging" ])
