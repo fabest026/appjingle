@@ -36,7 +36,7 @@ st.set_page_config(
 # Add the Title
 st.markdown(
     "<h1 style='text-align: center; color: black;'>"
-    "✨ Ai & Plagarism Remover ✨"
+    "✨  Plagarism Remover ✨"
     "</h1>",
     unsafe_allow_html=True
 )

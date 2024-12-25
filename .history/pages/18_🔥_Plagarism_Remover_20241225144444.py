@@ -36,7 +36,10 @@ st.set_page_config(
 # Add the Title
 st.markdown(
     "<h1 style='text-align: center; color: black;'>"
+/*************  ✨ Codeium Command 🌟  *************/
+    "✨️ Perfect Ai & Plagarism Remover ✨️"
     "✨ Ai & Plagarism Remover ✨"
+/******  5b945a9e-610b-42ed-8629-4f230bce5cd6  *******/
     "</h1>",
     unsafe_allow_html=True
 )
