@@ -5,13 +5,13 @@ from datetime import datetime
 # Page Configuration
 st.set_page_config(
     page_title="AppJingle Solutions",
-    page_icon="💫",
+    page_icon="✨",
     layout="wide",
     initial_sidebar_state="auto",
     menu_items=None
 )
 
-# Custom CSS with improved visibility
+# Custom CSS with purple color scheme
 st.markdown("""
     <style>
         /* Main container styling */
@@ -29,14 +29,14 @@ st.markdown("""
         
         /* Header styles */
         .company-header {
-            background: linear-gradient(135deg, #2D3436, #000000);
+            background: linear-gradient(135deg, #2D1B69, #6B46C1);
             padding: 4rem 2rem;
             border-radius: 24px;
             margin-bottom: 3rem;
             position: relative;
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 20px 40px rgba(107, 70, 193, 0.2);
         }
         
         .company-name {
@@ -45,13 +45,15 @@ st.markdown("""
             margin-bottom: 1.5rem;
             letter-spacing: -1px;
             line-height: 1.1;
-            color: #FF1493;
+            background: linear-gradient(45deg, #FF1493, #9F7AEA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             text-align: center;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
         
         .tag-line {
-            color: #FFFFFF;
+            color: #E9D8FD;
             font-size: 1.5rem;
             font-weight: 500;
             margin-bottom: 2rem;
@@ -60,23 +62,27 @@ st.markdown("""
         
         /* Service card styles */
         .service-card {
-            background: #FFFFFF;
+            background: rgba(255, 255, 255, 0.95);
             padding: 2.5rem;
             border-radius: 24px;
             transition: all 0.4s ease;
             height: 100%;
-            border: 1px solid #E2E8F0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #E9D8FD;
+            box-shadow: 0 4px 6px rgba(107, 70, 193, 0.1);
+            backdrop-filter: blur(10px);
         }
         
         .service-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            border-color: #FF1493;
+            box-shadow: 0 20px 40px rgba(107, 70, 193, 0.2);
+            border-color: #9F7AEA;
+            background: linear-gradient(135deg, #ffffff, #F7FAFC);
         }
         
         .service-title {
-            color: #FF1493;
+            background: linear-gradient(45deg, #6B46C1, #9F7AEA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             font-weight: 700;
             margin-bottom: 1.5rem;
             font-size: 1.8rem;
@@ -88,11 +94,14 @@ st.markdown("""
             margin-bottom: 1.5rem;
             display: block;
             text-align: center;
+            filter: drop-shadow(0 4px 6px rgba(107, 70, 193, 0.2));
         }
         
         /* Section styling */
         .section-title {
-            color: #FF1493;
+            background: linear-gradient(45deg, #6B46C1, #9F7AEA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: 2rem;
@@ -111,16 +120,19 @@ st.markdown("""
         
         /* Footer styles */
         .modern-footer {
-            background: #FFFFFF;
+            background: rgba(255, 255, 255, 0.95);
             padding: 3rem;
             border-radius: 24px;
             margin-top: 5rem;
-            border: 1px solid #E2E8F0;
-            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.05);
+            border: 1px solid #E9D8FD;
+            box-shadow: 0 -10px 40px rgba(107, 70, 193, 0.1);
+            backdrop-filter: blur(10px);
         }
         
         .footer-text {
-            color: #FF1493;
+            background: linear-gradient(45deg, #6B46C1, #9F7AEA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -129,7 +141,9 @@ st.markdown("""
         }
         
         .developer-name {
-            color: #FF1493;
+            background: linear-gradient(45deg, #6B46C1, #9F7AEA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
@@ -153,7 +167,7 @@ st.markdown("""
         
         /* Background styling */
         .stApp {
-            background: linear-gradient(to bottom right, #F7FAFC, #EDF2F7);
+            background: linear-gradient(135deg, #F7FAFC, #E9D8FD);
         }
         
         /* Hide Streamlit elements */
@@ -168,6 +182,53 @@ st.markdown("""
             line-height: 1.6;
             text-align: center;
         }
+        
+        /* Animation for cards */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .service-card {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Gradient border effect */
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+            border-radius: 24px;
+            background: linear-gradient(45deg, #6B46C1, #9F7AEA);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .service-card:hover::before {
+            opacity: 1;
+        }
+        
+        /* Glowing effect for icons */
+        .service-icon {
+            position: relative;
+        }
+        
+        .service-icon::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: radial-gradient(circle, rgba(107, 70, 193, 0.2) 0%, transparent 70%);
+            filter: blur(10px);
+            z-index: -1;
+        }
     </style>
 """, unsafe_allow_html=True)
 
@@ -176,13 +237,13 @@ with st.container():
     st.markdown("""
         <div class="company-header">
             <h1 class="company-name">AppJingle Solutions</h1>
-            <p class="tag-line">Boost your business with our IT solutions</p>
-            <h2 style="color: white; font-size: 2rem; font-weight: 600; margin-top: 2rem; text-align: center;">
-                YOUR SUCCESS IS OUR TOP CONCERN
+            <p class="tag-line">Elevate Your Business with Our IT Solutions</p>
+            <h2 style="color: #E9D8FD; font-size: 2rem; font-weight: 600; margin-top: 2rem; text-align: center;">
+                TRANSFORMING IDEAS INTO DIGITAL REALITY
             </h2>
-            <p style="color: white; font-size: 1.2rem; font-weight: 400; margin-top: 1rem; text-align: center;">
-                At AppJingle, we use our experience and commitment to provide great service 
-                and real value to our clients.
+            <p style="color: #E9D8FD; font-size: 1.2rem; font-weight: 400; margin-top: 1rem; text-align: center;">
+                At AppJingle, we combine innovation with expertise to deliver exceptional digital solutions 
+                that drive your business forward.
             </p>
         </div>
     """, unsafe_allow_html=True)
@@ -192,9 +253,9 @@ st.markdown("""
     <div style='margin: 5rem 0;'>
         <h2 class="section-title">What We Do</h2>
         <p class="section-description">
-            We build AI-powered apps for your website and phone that help you make more money. 
-            We understand your business and choose the best technology to help you grow. 
-            Let's work together to make your business even better!
+            We create cutting-edge AI-powered applications that revolutionize your digital presence. 
+            Our team of experts crafts tailored solutions using state-of-the-art technology to help your business thrive 
+            in the digital age. Let's collaborate to transform your vision into reality!
         </p>
     </div>
 """, unsafe_allow_html=True)
@@ -206,17 +267,17 @@ services = [
     {
         "icon": "💻",
         "title": "Web Development",
-        "description": "We help you build stunning and functional websites that perfectly align with your business goals. With our expertise, we create intuitive interfaces and robust backend systems."
+        "description": "Create stunning, responsive websites with modern frameworks and cutting-edge technologies. We deliver seamless user experiences that convert visitors into customers."
     },
     {
         "icon": "📱",
         "title": "Mobile Development",
-        "description": "We assist you in creating mobile applications that are simple to use and offer a smooth user experience. Our team of skilled developers will work closely with you."
+        "description": "Build powerful mobile applications that engage users and drive business growth. Our expert team develops native and cross-platform solutions tailored to your needs."
     },
     {
         "icon": "🤖",
-        "title": "AI Development",
-        "description": "Tap into the power of artificial intelligence with our AI app development services. We create innovative applications that leverage machine learning to automate processes."
+        "title": "AI Solutions",
+        "description": "Harness the power of artificial intelligence to automate processes and gain valuable insights. We develop smart applications that learn and adapt to your business needs."
     }
 ]
 
@@ -237,21 +298,21 @@ st.markdown("""
     <div class="modern-footer">
         <div style="text-align: center;">
             <p class="footer-text">
-                Developed by
+                Crafted with ❤️ by
             </p>
             <h3 class="developer-name">Farhan Akbar</h3>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/farhan-akbar-ai/" target="_blank">
-                    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+                    <img src="https://img.shields.io/badge/LinkedIn-6B46C1?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
                 </a>
                 <a href="https://api.whatsapp.com/send?phone=923034532403" target="_blank">
-                    <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp"/>
+                    <img src="https://img.shields.io/badge/WhatsApp-9F7AEA?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp"/>
                 </a>
                 <a href="https://www.facebook.com/appjingle" target="_blank">
-                    <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook"/>
+                    <img src="https://img.shields.io/badge/Facebook-6B46C1?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook"/>
                 </a>
                 <a href="mailto:rasolehri@gmail.com">
-                    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+                    <img src="https://img.shields.io/badge/Email-9F7AEA?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
                 </a>
             </div>
         </div>
