@@ -195,9 +195,8 @@ st.markdown(
     <div class="header-container">
         <h1 class="main-title">✨ Keyword Cluster AI ✨</h1>
         <p class="subtitle">Powered by AppJingle Solutions</p>
-        <div class="user-info">
-            👤 {CURRENT_USER} | 🕒 {CURRENT_TIME} UTC
-        </div>
+                                                                   
+  
         <div class="stats-container">
             <div class="stat-card">
                 <div class="stat-value">24</div>
