@@ -42,14 +42,33 @@ def apply_custom_styling():
             padding-bottom: 100px;
         }
         
-        /* Header styles */
-        .header-container {
-            background: linear-gradient(135deg, #6366F1 0%, #A855F7 100%);
-            padding: 2.5rem;
-            border-radius: 20px;
-            margin-bottom: 2rem;
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
-        }
+       # Add this to your apply_custom_styling() function
+"""
+/* Header container */
+.header-container {
+    background: linear-gradient(135deg, #6366F1 0%, #A855F7 100%);
+    padding: 2.5rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+    text-align: center;
+}
+
+.header-title {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.header-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Remove the previous stats-grid and stat-card styles */
+"""
         
         .header-title {
             color: white;
@@ -215,18 +234,18 @@ st.markdown(f"""
         <h1 class="header-title">✨ Keyword Cluster AI ✨</h1>
         <p class="header-subtitle">AI-Powered Keyword Research Tool</p>
         
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-value">24</div>
-                <div class="stat-label">Daily Searches</div>
+        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
+            <div style="background: rgba(255, 255, 255, 0.1); padding: 1.5rem 2.5rem; border-radius: 15px; text-align: center; min-width: 180px; backdrop-filter: blur(10px);">
+                <div style="color: white; font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;">24</div>
+                <div style="color: rgba(255, 255, 255, 0.9); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Daily Searches</div>
             </div>
-            <div class="stat-card">
-                <div class="stat-value">98%</div>
-                <div class="stat-label">Accuracy Rate</div>
+            <div style="background: rgba(255, 255, 255, 0.1); padding: 1.5rem 2.5rem; border-radius: 15px; text-align: center; min-width: 180px; backdrop-filter: blur(10px);">
+                <div style="color: white; font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;">98%</div>
+                <div style="color: rgba(255, 255, 255, 0.9); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Accuracy Rate</div>
             </div>
-            <div class="stat-card">
-                <div class="stat-value">1.2s</div>
-                <div class="stat-label">Response Time</div>
+            <div style="background: rgba(255, 255, 255, 0.1); padding: 1.5rem 2.5rem; border-radius: 15px; text-align: center; min-width: 180px; backdrop-filter: blur(10px);">
+                <div style="color: white; font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;">1.2s</div>
+                <div style="color: rgba(255, 255, 255, 0.9); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Response Time</div>
             </div>
         </div>
     </div>
