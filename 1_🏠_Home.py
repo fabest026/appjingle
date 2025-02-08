@@ -5,13 +5,13 @@ from datetime import datetime
 # Page Configuration
 st.set_page_config(
     page_title="AppJingle Solutions",
-    page_icon="💫",
+    page_icon="✨",
     layout="wide",
     initial_sidebar_state="auto",
     menu_items=None
 )
 
-# Custom CSS with improved visibility
+# Custom CSS with user-friendly colors
 st.markdown("""
     <style>
         /* Main container styling */
@@ -29,29 +29,29 @@ st.markdown("""
         
         /* Header styles */
         .company-header {
-            background: linear-gradient(135deg, #2D3436, #000000);
+            background: linear-gradient(135deg, #2C3E50, #3498DB);
             padding: 4rem 2rem;
-            border-radius: 24px;
+            border-radius: 16px;
             margin-bottom: 3rem;
             position: relative;
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
         
         .company-name {
-            font-size: 5rem;
+            font-size: 4.5rem;
             font-weight: 800;
             margin-bottom: 1.5rem;
             letter-spacing: -1px;
             line-height: 1.1;
-            color: #FF1493;
+            color: #FFFFFF;
             text-align: center;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
         
         .tag-line {
-            color: #FFFFFF;
+            color: #ECF0F1;
             font-size: 1.5rem;
             font-weight: 500;
             margin-bottom: 2rem;
@@ -62,21 +62,21 @@ st.markdown("""
         .service-card {
             background: #FFFFFF;
             padding: 2.5rem;
-            border-radius: 24px;
-            transition: all 0.4s ease;
+            border-radius: 16px;
+            transition: all 0.3s ease;
             height: 100%;
-            border: 1px solid #E2E8F0;
+            border: 1px solid #E0E0E0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
         
         .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            border-color: #FF1493;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-color: #3498DB;
         }
         
         .service-title {
-            color: #FF1493;
+            color: #2C3E50;
             font-weight: 700;
             margin-bottom: 1.5rem;
             font-size: 1.8rem;
@@ -92,16 +92,15 @@ st.markdown("""
         
         /* Section styling */
         .section-title {
-            color: #FF1493;
+            color: #2C3E50;
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: 2rem;
             text-align: center;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
         
         .section-description {
-            color: #4A5568;
+            color: #34495E;
             font-size: 1.3rem;
             max-width: 900px;
             margin: 0 auto 4rem auto;
@@ -113,14 +112,14 @@ st.markdown("""
         .modern-footer {
             background: #FFFFFF;
             padding: 3rem;
-            border-radius: 24px;
+            border-radius: 16px;
             margin-top: 5rem;
-            border: 1px solid #E2E8F0;
-            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.05);
+            border: 1px solid #E0E0E0;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
         }
         
         .footer-text {
-            color: #FF1493;
+            color: #2C3E50;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -129,7 +128,7 @@ st.markdown("""
         }
         
         .developer-name {
-            color: #FF1493;
+            color: #3498DB;
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
@@ -148,12 +147,12 @@ st.markdown("""
         }
         
         .social-links a:hover {
-            transform: translateY(-4px);
+            transform: translateY(-3px);
         }
         
         /* Background styling */
         .stApp {
-            background: linear-gradient(to bottom right, #F7FAFC, #EDF2F7);
+            background: #F8F9FA;
         }
         
         /* Hide Streamlit elements */
@@ -163,12 +162,43 @@ st.markdown("""
         
         /* Service text styling */
         .service-text {
-            color: #4A5568;
+            color: #34495E;
             font-size: 1.1rem;
             line-height: 1.6;
-            text-align: center;
+            text-align: left;
+        }
+        
+        /* Current time display */
+        .time-display {
+            background: #FFFFFF;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            color: #2C3E50;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            border: 1px solid #E0E0E0;
+        }
+        
+        /* User info display */
+        .user-info {
+            color: #2C3E50;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
         }
     </style>
+""", unsafe_allow_html=True)
+
+# Display current time and user info
+st.markdown(f"""
+    <div style="text-align: right;">
+        <div class="time-display">
+            UTC: 2025-02-08 06:36:30
+        </div>
+        <div class="user-info">
+            Welcome, fabest026
+        </div>
+    </div>
 """, unsafe_allow_html=True)
 
 # Header Section
@@ -176,13 +206,12 @@ with st.container():
     st.markdown("""
         <div class="company-header">
             <h1 class="company-name">AppJingle Solutions</h1>
-            <p class="tag-line">Boost your business with our IT solutions</p>
-            <h2 style="color: white; font-size: 2rem; font-weight: 600; margin-top: 2rem; text-align: center;">
-                YOUR SUCCESS IS OUR TOP CONCERN
+            <p class="tag-line">Smart Solutions for Your Digital Success</p>
+            <h2 style="color: #ECF0F1; font-size: 2rem; font-weight: 600; margin-top: 2rem; text-align: center;">
+                YOUR TRUSTED TECHNOLOGY PARTNER
             </h2>
-            <p style="color: white; font-size: 1.2rem; font-weight: 400; margin-top: 1rem; text-align: center;">
-                At AppJingle, we use our experience and commitment to provide great service 
-                and real value to our clients.
+            <p style="color: #ECF0F1; font-size: 1.2rem; font-weight: 400; margin-top: 1rem; text-align: center;">
+                We deliver innovative solutions that help your business grow and succeed in the digital world.
             </p>
         </div>
     """, unsafe_allow_html=True)
@@ -190,11 +219,11 @@ with st.container():
 # What We Do Section
 st.markdown("""
     <div style='margin: 5rem 0;'>
-        <h2 class="section-title">What We Do</h2>
+        <h2 class="section-title">Our Services</h2>
         <p class="section-description">
-            We build AI-powered apps for your website and phone that help you make more money. 
-            We understand your business and choose the best technology to help you grow. 
-            Let's work together to make your business even better!
+            We specialize in creating powerful digital solutions that help businesses thrive. 
+            Our expert team combines technical expertise with creative innovation to deliver 
+            outstanding results for our clients.
         </p>
     </div>
 """, unsafe_allow_html=True)
@@ -206,17 +235,17 @@ services = [
     {
         "icon": "💻",
         "title": "Web Development",
-        "description": "We help you build stunning and functional websites that perfectly align with your business goals. With our expertise, we create intuitive interfaces and robust backend systems."
+        "description": "Professional websites built with modern technologies. We focus on creating responsive, fast-loading sites that provide excellent user experience and drive conversions."
     },
     {
         "icon": "📱",
         "title": "Mobile Development",
-        "description": "We assist you in creating mobile applications that are simple to use and offer a smooth user experience. Our team of skilled developers will work closely with you."
+        "description": "Custom mobile applications for iOS and Android. We create user-friendly apps that engage your audience and help achieve your business objectives."
     },
     {
         "icon": "🤖",
-        "title": "AI Development",
-        "description": "Tap into the power of artificial intelligence with our AI app development services. We create innovative applications that leverage machine learning to automate processes."
+        "title": "AI Solutions",
+        "description": "Smart AI-powered applications that streamline your business processes. We implement practical AI solutions that deliver real value to your organization."
     }
 ]
 
@@ -237,7 +266,7 @@ st.markdown("""
     <div class="modern-footer">
         <div style="text-align: center;">
             <p class="footer-text">
-                Developed by
+                Created by
             </p>
             <h3 class="developer-name">Farhan Akbar</h3>
             <div class="social-links">
