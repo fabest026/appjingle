@@ -1,256 +1,245 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+from datetime import datetime
 
 # Page Configuration
 st.set_page_config(
     page_title="AppJingle Solutions",
-    page_icon="⚡",
+    page_icon="💫",
     layout="wide",
     initial_sidebar_state="auto",
     menu_items=None
 )
 
-# Custom CSS with advanced UI elements
+# Enhanced Custom CSS with Modern Design Principles
 st.markdown("""
     <style>
-        /* Main container styling */
-        .block-container {
-            padding: 0;
-            max-width: 100%;
+        /* Import multiple modern fonts for better typography */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+        
+        /* CSS Variables for consistent theming */
+        :root {
+            --primary-color: #6366F1;
+            --secondary-color: #4F46E5;
+            --accent-color: #EC4899;
+            --background-color: #F8FAFC;
+            --card-background: #FFFFFF;
+            --text-primary: #1E293B;
+            --text-secondary: #475569;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.1);
+            --gradient-primary: linear-gradient(135deg, #6366F1, #4F46E5);
+            --gradient-accent: linear-gradient(135deg, #EC4899, #D946EF);
         }
-        
-        /* Typography */
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-        
+
+        /* Base styles */
         * {
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
-        /* Header styles */
+
+        .stApp {
+            background: var(--background-color);
+        }
+
+        /* Enhanced container styling */
+        .block-container {
+            padding: 2rem 4rem;
+            max-width: 1600px;
+        }
+
+        /* Modern header with glass morphism effect */
         .company-header {
-            background: linear-gradient(135deg, #1a1c23 0%, #242938 100%);
-            padding: 8rem 2rem;
+            background: var(--gradient-primary);
+            backdrop-filter: blur(10px);
+            padding: 5rem 2rem;
+            border-radius: 32px;
+            margin-bottom: 4rem;
             position: relative;
             overflow: hidden;
-            margin-bottom: 4rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-lg);
         }
-        
-        .company-header::before {
+
+        /* Enhanced typography */
+        .company-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 6rem;
+            font-weight: 800;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin-bottom: 2rem;
+            letter-spacing: -2px;
+            line-height: 1;
+        }
+
+        .tag-line {
+            font-family: 'Manrope', sans-serif;
+            color: #FFFFFF;
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            opacity: 0.9;
+        }
+
+        /* Modern card design with hover effects */
+        .service-card {
+            background: var(--card-background);
+            padding: 3rem;
+            border-radius: 24px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI1MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiIGlkPSJhIj48c3RvcCBzdG9wLWNvbG9yPSIjMkM1MzY0IiBvZmZzZXQ9IjAlIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzIwMjgzRCIgb2Zmc2V0PSIxMDAlIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHBhdGggZD0iTTAgMGgxNDQwdjUwMEgweiIgZmlsbD0idXJsKCNhKSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+');
-            opacity: 0.1;
-            z-index: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
-        .header-content {
-            position: relative;
-            z-index: 1;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .company-name {
-            font-size: 5.5rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #00FF87 0%, #60EFFF 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-align: center;
-            line-height: 1.1;
-            letter-spacing: -2px;
-        }
-        
-        .tag-line {
-            color: #FFFFFF;
-            font-size: 1.8rem;
-            font-weight: 500;
-            margin-bottom: 2rem;
-            text-align: center;
-            opacity: 0.9;
-        }
-        
-        /* Service card styles */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            padding: 0 4rem;
-            margin-bottom: 4rem;
-        }
-        
-        .service-card {
-            background: rgba(255, 255, 255, 0.98);
-            padding: 3rem;
-            border-radius: 20px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            border: 1px solid rgba(0, 0, 0, 0.08);
-        }
-        
-        .service-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: 20px;
-            padding: 2px;
-            background: linear-gradient(135deg, #00FF87 0%, #60EFFF 100%);
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            opacity: 0;
-            transition: all 0.4s ease;
-        }
-        
+
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
         }
-        
+
         .service-card:hover::before {
-            opacity: 1;
+            transform: scaleX(1);
         }
-        
+
+        /* Enhanced service components */
         .service-icon {
             font-size: 4rem;
             margin-bottom: 2rem;
             display: block;
             text-align: center;
-            position: relative;
-        }
-        
-        .service-icon::after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #00FF87 0%, #60EFFF 100%);
-            border-radius: 50%;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 0.1;
-            z-index: -1;
-        }
-        
-        .service-title {
-            color: #1a1c23;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-        
-        .service-text {
-            color: #4a5568;
-            font-size: 1.1rem;
-            line-height: 1.7;
-            text-align: center;
-        }
-        
-        /* Section styling */
-        .section-title {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #1a1c23 0%, #242938 100%);
+            background: var(--gradient-primary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        .service-title {
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .service-text {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        /* Modern section styling */
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--primary-color);
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
             text-align: center;
             letter-spacing: -1px;
         }
-        
+
         .section-description {
-            color: #4a5568;
+            color: var(--text-secondary);
             font-size: 1.4rem;
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto 5rem auto;
             text-align: center;
             line-height: 1.8;
+            font-family: 'Manrope', sans-serif;
         }
-        
-        /* Footer styles */
+
+        /* Enhanced footer design */
         .modern-footer {
-            background: #1a1c23;
-            padding: 5rem 2rem;
-            margin-top: 8rem;
-            position: relative;
-            overflow: hidden;
+            background: var(--card-background);
+            padding: 4rem;
+            border-radius: 32px;
+            margin-top: 6rem;
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            box-shadow: var(--shadow-lg);
         }
-        
-        .footer-content {
-            position: relative;
-            z-index: 1;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
+
         .footer-text {
-            color: rgba(255, 255, 255, 0.7);
-            font-weight: 500;
+            color: var(--primary-color);
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             margin-bottom: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
         }
-        
+
         .developer-name {
-            background: linear-gradient(135deg, #00FF87 0%, #60EFFF 100%);
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--gradient-primary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 2rem;
+            text-align: center;
         }
-        
+
+        /* Enhanced social links */
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 2rem;
             margin-top: 3rem;
         }
-        
+
         .social-links a {
-            transition: all 0.3s ease;
-            opacity: 0.8;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0.9;
         }
-        
+
         .social-links a:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px) scale(1.05);
             opacity: 1;
         }
-        
-        /* Background styling */
-        .stApp {
-            background: #f8fafc;
-        }
-        
+
         /* Hide Streamlit elements */
         #MainMenu {visibility: hidden;}
         footer {visibility: hidden;}
         header {visibility: hidden;}
-        
+
         /* Responsive Design */
         @media (max-width: 768px) {
-            .services-grid {
-                grid-template-columns: 1fr;
-                padding: 0 2rem;
+            .block-container {
+                padding: 1rem;
             }
             
             .company-name {
-                font-size: 3.5rem;
+                font-size: 4rem;
             }
             
             .tag-line {
                 font-size: 1.4rem;
+            }
+            
+            .service-card {
+                padding: 2rem;
             }
             
             .section-title {
@@ -259,76 +248,88 @@ st.markdown("""
             
             .section-description {
                 font-size: 1.2rem;
-                padding: 0 2rem;
             }
+        }
+
+        /* Animation Classes */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
         }
     </style>
 """, unsafe_allow_html=True)
 
-# Header Section
+# Header Section with enhanced animation
 with st.container():
     st.markdown("""
-        <div class="company-header">
-            <div class="header-content">
-                <h1 class="company-name">AppJingle Solutions</h1>
-                <p class="tag-line">Transforming Ideas into Digital Excellence</p>
-                <h2 style="color: rgba(255,255,255,0.9); font-size: 2.2rem; font-weight: 600; margin-top: 2rem; text-align: center;">
-                    INNOVATIVE • RELIABLE • CUTTING-EDGE
-                </h2>
-            </div>
+        <div class="company-header animate-fade-in">
+            <h1 class="company-name">AppJingle Solutions</h1>
+            <p class="tag-line">Elevate Your Business with Innovative IT Solutions</p>
+            <h2 style="color: white; font-size: 2.2rem; font-weight: 600; margin-top: 2.5rem; text-align: center; opacity: 0.9;">
+                TRANSFORMING IDEAS INTO DIGITAL REALITY
+            </h2>
+            <p style="color: white; font-size: 1.3rem; font-weight: 400; margin-top: 1.5rem; text-align: center; opacity: 0.8;">
+                We combine creativity, technology, and strategy to deliver exceptional digital solutions 
+                that drive your business forward.
+            </p>
         </div>
     """, unsafe_allow_html=True)
 
-# Services Section
+# What We Do Section
 st.markdown("""
-    <div style='padding: 0 2rem;'>
-        <h2 class="section-title">Our Expertise</h2>
+    <div style='margin: 6rem 0;' class="animate-fade-in">
+        <h2 class="section-title">What We Do</h2>
         <p class="section-description">
-            We deliver cutting-edge solutions that help businesses thrive in the digital age. 
-            Our team combines technical excellence with creative innovation to create 
-            exceptional digital experiences.
+            We specialize in creating intelligent, AI-powered applications that transform your digital presence. 
+            Our solutions are tailored to your unique business needs, combining cutting-edge technology 
+            with user-centric design to deliver exceptional results.
         </p>
     </div>
 """, unsafe_allow_html=True)
 
-# Services Grid
+# Enhanced Services Section
+col1, col2, col3 = st.columns(3)
+
 services = [
     {
         "icon": "💻",
         "title": "Web Development",
-        "description": "Creating powerful, responsive web applications using cutting-edge technologies. We focus on performance, security, and exceptional user experience."
+        "description": "Create stunning, responsive websites that captivate your audience. Our expert team delivers seamless user experiences with cutting-edge technologies and robust backend systems."
     },
     {
         "icon": "📱",
         "title": "Mobile Development",
-        "description": "Building native and cross-platform mobile applications that engage users and drive business growth. Expert solutions for iOS and Android."
+        "description": "Build powerful mobile applications that engage users and drive results. We specialize in creating intuitive, feature-rich apps for both iOS and Android platforms."
     },
     {
         "icon": "🤖",
-        "title": "AI Solutions",
-        "description": "Implementing intelligent AI systems that automate processes and provide valuable insights. Custom AI solutions tailored to your business needs."
+        "title": "AI Development",
+        "description": "Harness the power of artificial intelligence to automate processes and gain valuable insights. We develop smart solutions that help your business stay ahead of the competition."
     }
 ]
 
-st.markdown('<div class="services-grid">', unsafe_allow_html=True)
-for service in services:
-    st.markdown(f"""
-        <div class="service-card">
-            <div class="service-icon">{service['icon']}</div>
-            <h3 class="service-title">{service['title']}</h3>
-            <p class="service-text">
-                {service['description']}
-            </p>
-        </div>
-    """, unsafe_allow_html=True)
-st.markdown('</div>', unsafe_allow_html=True)
+for col, service in zip([col1, col2, col3], services):
+    with col:
+        st.markdown(f"""
+            <div class="service-card animate-fade-in">
+                <div class="service-icon">{service['icon']}</div>
+                <h3 class="service-title">{service['title']}</h3>
+                <p class="service-text">
+                    {service['description']}
+                </p>
+            </div>
+        """, unsafe_allow_html=True)
 
-# Footer
+# Enhanced Footer
 st.markdown("""
-    <div class="modern-footer">
-        <div class="footer-content">
+    <div class="modern-footer animate-fade-in">
+        <div style="text-align: center;">
             <p class="footer-text">
-                Crafted with Precision
+                Crafted with ❤️ by
             </p>
             <h3 class="developer-name">Farhan Akbar</h3>
             <div class="social-links">
