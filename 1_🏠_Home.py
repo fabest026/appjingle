@@ -1,23 +1,22 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from datetime import datetime
 
 # Page Configuration
 st.set_page_config(
     page_title="AppJingle Solutions",
-    page_icon="✨",
+    page_icon="⚡",
     layout="wide",
     initial_sidebar_state="auto",
     menu_items=None
 )
 
-# Custom CSS with user-friendly colors
+# Custom CSS with advanced UI elements
 st.markdown("""
     <style>
         /* Main container styling */
         .block-container {
-            padding: 1rem 3rem;
-            max-width: 1400px;
+            padding: 0;
+            max-width: 100%;
         }
         
         /* Typography */
@@ -25,134 +24,213 @@ st.markdown("""
         
         * {
             font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
         /* Header styles */
         .company-header {
-            background: linear-gradient(135deg, #2C3E50, #3498DB);
-            padding: 4rem 2rem;
-            border-radius: 16px;
-            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #1a1c23 0%, #242938 100%);
+            padding: 8rem 2rem;
             position: relative;
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 4rem;
+        }
+        
+        .company-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI1MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiIGlkPSJhIj48c3RvcCBzdG9wLWNvbG9yPSIjMkM1MzY0IiBvZmZzZXQ9IjAlIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzIwMjgzRCIgb2Zmc2V0PSIxMDAlIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHBhdGggZD0iTTAgMGgxNDQwdjUwMEgweiIgZmlsbD0idXJsKCNhKSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+');
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         
         .company-name {
-            font-size: 4.5rem;
+            font-size: 5.5rem;
             font-weight: 800;
             margin-bottom: 1.5rem;
-            letter-spacing: -1px;
-            line-height: 1.1;
-            color: #FFFFFF;
+            background: linear-gradient(135deg, #00FF87 0%, #60EFFF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             text-align: center;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            line-height: 1.1;
+            letter-spacing: -2px;
         }
         
         .tag-line {
-            color: #ECF0F1;
-            font-size: 1.5rem;
+            color: #FFFFFF;
+            font-size: 1.8rem;
             font-weight: 500;
             margin-bottom: 2rem;
             text-align: center;
+            opacity: 0.9;
         }
         
         /* Service card styles */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            padding: 0 4rem;
+            margin-bottom: 4rem;
+        }
+        
         .service-card {
-            background: #FFFFFF;
-            padding: 2.5rem;
-            border-radius: 16px;
-            transition: all 0.3s ease;
-            height: 100%;
-            border: 1px solid #E0E0E0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            background: rgba(255, 255, 255, 0.98);
+            padding: 3rem;
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            padding: 2px;
+            background: linear-gradient(135deg, #00FF87 0%, #60EFFF 100%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: all 0.4s ease;
         }
         
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            border-color: #3498DB;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+        
+        .service-card:hover::before {
+            opacity: 1;
+        }
+        
+        .service-icon {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            display: block;
+            text-align: center;
+            position: relative;
+        }
+        
+        .service-icon::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #00FF87 0%, #60EFFF 100%);
+            border-radius: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.1;
+            z-index: -1;
         }
         
         .service-title {
-            color: #2C3E50;
+            color: #1a1c23;
+            font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
-            font-size: 1.8rem;
+            text-align: center;
         }
         
-        /* Service icon styles */
-        .service-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            display: block;
+        .service-text {
+            color: #4a5568;
+            font-size: 1.1rem;
+            line-height: 1.7;
             text-align: center;
         }
         
         /* Section styling */
         .section-title {
-            color: #2C3E50;
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #1a1c23 0%, #242938 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             text-align: center;
+            letter-spacing: -1px;
         }
         
         .section-description {
-            color: #34495E;
-            font-size: 1.3rem;
-            max-width: 900px;
-            margin: 0 auto 4rem auto;
+            color: #4a5568;
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto 5rem auto;
             text-align: center;
             line-height: 1.8;
         }
         
         /* Footer styles */
         .modern-footer {
-            background: #FFFFFF;
-            padding: 3rem;
-            border-radius: 16px;
-            margin-top: 5rem;
-            border: 1px solid #E0E0E0;
-            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+            background: #1a1c23;
+            padding: 5rem 2rem;
+            margin-top: 8rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
         }
         
         .footer-text {
-            color: #2C3E50;
-            font-weight: 600;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 0.5rem;
-            text-align: center;
+            margin-bottom: 1rem;
         }
         
         .developer-name {
-            color: #3498DB;
-            font-size: 2rem;
+            background: linear-gradient(135deg, #00FF87 0%, #60EFFF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 1.5rem;
-            text-align: center;
+            margin-bottom: 2rem;
         }
         
         .social-links {
             display: flex;
             justify-content: center;
             gap: 1.5rem;
-            margin-top: 2rem;
+            margin-top: 3rem;
         }
         
         .social-links a {
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+            opacity: 0.8;
         }
         
         .social-links a:hover {
-            transform: translateY(-3px);
+            transform: translateY(-5px);
+            opacity: 1;
         }
         
         /* Background styling */
         .stApp {
-            background: #F8F9FA;
+            background: #f8fafc;
         }
         
         /* Hide Streamlit elements */
@@ -160,113 +238,97 @@ st.markdown("""
         footer {visibility: hidden;}
         header {visibility: hidden;}
         
-        /* Service text styling */
-        .service-text {
-            color: #34495E;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            text-align: left;
-        }
-        
-        /* Current time display */
-        .time-display {
-            background: #FFFFFF;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            color: #2C3E50;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            display: inline-block;
-            border: 1px solid #E0E0E0;
-        }
-        
-        /* User info display */
-        .user-info {
-            color: #2C3E50;
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                padding: 0 2rem;
+            }
+            
+            .company-name {
+                font-size: 3.5rem;
+            }
+            
+            .tag-line {
+                font-size: 1.4rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-description {
+                font-size: 1.2rem;
+                padding: 0 2rem;
+            }
         }
     </style>
-""", unsafe_allow_html=True)
-
-# Display current time and user info
-st.markdown(f"""
-    <div style="text-align: right;">
-        <div class="time-display">
-            UTC: 2025-02-08 06:36:30
-        </div>
-        <div class="user-info">
-            Welcome, fabest026
-        </div>
-    </div>
 """, unsafe_allow_html=True)
 
 # Header Section
 with st.container():
     st.markdown("""
         <div class="company-header">
-            <h1 class="company-name">AppJingle Solutions</h1>
-            <p class="tag-line">Smart Solutions for Your Digital Success</p>
-            <h2 style="color: #ECF0F1; font-size: 2rem; font-weight: 600; margin-top: 2rem; text-align: center;">
-                YOUR TRUSTED TECHNOLOGY PARTNER
-            </h2>
-            <p style="color: #ECF0F1; font-size: 1.2rem; font-weight: 400; margin-top: 1rem; text-align: center;">
-                We deliver innovative solutions that help your business grow and succeed in the digital world.
-            </p>
+            <div class="header-content">
+                <h1 class="company-name">AppJingle Solutions</h1>
+                <p class="tag-line">Transforming Ideas into Digital Excellence</p>
+                <h2 style="color: rgba(255,255,255,0.9); font-size: 2.2rem; font-weight: 600; margin-top: 2rem; text-align: center;">
+                    INNOVATIVE • RELIABLE • CUTTING-EDGE
+                </h2>
+            </div>
         </div>
     """, unsafe_allow_html=True)
 
-# What We Do Section
+# Services Section
 st.markdown("""
-    <div style='margin: 5rem 0;'>
-        <h2 class="section-title">Our Services</h2>
+    <div style='padding: 0 2rem;'>
+        <h2 class="section-title">Our Expertise</h2>
         <p class="section-description">
-            We specialize in creating powerful digital solutions that help businesses thrive. 
-            Our expert team combines technical expertise with creative innovation to deliver 
-            outstanding results for our clients.
+            We deliver cutting-edge solutions that help businesses thrive in the digital age. 
+            Our team combines technical excellence with creative innovation to create 
+            exceptional digital experiences.
         </p>
     </div>
 """, unsafe_allow_html=True)
 
-# Services Section
-col1, col2, col3 = st.columns(3)
-
+# Services Grid
 services = [
     {
         "icon": "💻",
         "title": "Web Development",
-        "description": "Professional websites built with modern technologies. We focus on creating responsive, fast-loading sites that provide excellent user experience and drive conversions."
+        "description": "Creating powerful, responsive web applications using cutting-edge technologies. We focus on performance, security, and exceptional user experience."
     },
     {
         "icon": "📱",
         "title": "Mobile Development",
-        "description": "Custom mobile applications for iOS and Android. We create user-friendly apps that engage your audience and help achieve your business objectives."
+        "description": "Building native and cross-platform mobile applications that engage users and drive business growth. Expert solutions for iOS and Android."
     },
     {
         "icon": "🤖",
         "title": "AI Solutions",
-        "description": "Smart AI-powered applications that streamline your business processes. We implement practical AI solutions that deliver real value to your organization."
+        "description": "Implementing intelligent AI systems that automate processes and provide valuable insights. Custom AI solutions tailored to your business needs."
     }
 ]
 
-for col, service in zip([col1, col2, col3], services):
-    with col:
-        st.markdown(f"""
-            <div class="service-card">
-                <div class="service-icon">{service['icon']}</div>
-                <h3 class="service-title">{service['title']}</h3>
-                <p class="service-text">
-                    {service['description']}
-                </p>
-            </div>
-        """, unsafe_allow_html=True)
+st.markdown('<div class="services-grid">', unsafe_allow_html=True)
+for service in services:
+    st.markdown(f"""
+        <div class="service-card">
+            <div class="service-icon">{service['icon']}</div>
+            <h3 class="service-title">{service['title']}</h3>
+            <p class="service-text">
+                {service['description']}
+            </p>
+        </div>
+    """, unsafe_allow_html=True)
+st.markdown('</div>', unsafe_allow_html=True)
 
 # Footer
 st.markdown("""
     <div class="modern-footer">
-        <div style="text-align: center;">
+        <div class="footer-content">
             <p class="footer-text">
-                Created by
+                Crafted with Precision
             </p>
             <h3 class="developer-name">Farhan Akbar</h3>
             <div class="social-links">
