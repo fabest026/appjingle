@@ -11,311 +11,219 @@ st.set_page_config(
     menu_items=None
 )
 
-# Enhanced Custom CSS with Modern Design Principles
+# Custom CSS with improved visibility
 st.markdown("""
     <style>
-        /* Import multiple modern fonts for better typography */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-        
-        /* CSS Variables for consistent theming */
-        :root {
-            --primary-color: #6366F1;
-            --secondary-color: #4F46E5;
-            --accent-color: #EC4899;
-            --background-color: #F8FAFC;
-            --card-background: #FFFFFF;
-            --text-primary: #1E293B;
-            --text-secondary: #475569;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
-            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
-            --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.1);
-            --gradient-primary: linear-gradient(135deg, #6366F1, #4F46E5);
-            --gradient-accent: linear-gradient(135deg, #EC4899, #D946EF);
-        }
-
-        /* Base styles */
-        * {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .stApp {
-            background: var(--background-color);
-        }
-
-        /* Enhanced container styling */
+        /* Main container styling */
         .block-container {
-            padding: 2rem 4rem;
-            max-width: 1600px;
+            padding: 1rem 3rem;
+            max-width: 1400px;
         }
-
-        /* Modern header with glass morphism effect */
+        
+        /* Typography */
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        
+        /* Header styles */
         .company-header {
-            background: var(--gradient-primary);
-            backdrop-filter: blur(10px);
-            padding: 5rem 2rem;
-            border-radius: 32px;
-            margin-bottom: 4rem;
+            background: linear-gradient(135deg, #2D3436, #000000);
+            padding: 4rem 2rem;
+            border-radius: 24px;
+            margin-bottom: 3rem;
             position: relative;
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
-
-        /* Enhanced typography */
+        
         .company-name {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 6rem;
+            font-size: 5rem;
             font-weight: 800;
-            background: var(--gradient-accent);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+            line-height: 1.1;
+            color: #FF1493;
             text-align: center;
-            margin-bottom: 2rem;
-            letter-spacing: -2px;
-            line-height: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-
+        
         .tag-line {
-            font-family: 'Manrope', sans-serif;
             color: #FFFFFF;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 500;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
             text-align: center;
-            opacity: 0.9;
         }
-
-        /* Modern card design with hover effects */
+        
+        /* Service card styles */
         .service-card {
-            background: var(--card-background);
-            padding: 3rem;
+            background: #FFFFFF;
+            padding: 2.5rem;
             border-radius: 24px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s ease;
             height: 100%;
-            border: 1px solid rgba(99, 102, 241, 0.1);
-            box-shadow: var(--shadow-sm);
-            position: relative;
-            overflow: hidden;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-primary);
-            transform: scaleX(0);
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
+        
         .service-card:hover {
             transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: #FF1493;
         }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        /* Enhanced service components */
-        .service-icon {
-            font-size: 4rem;
-            margin-bottom: 2rem;
-            display: block;
-            text-align: center;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
+        
         .service-title {
-            font-family: 'Space Grotesk', sans-serif;
-            color: var(--primary-color);
+            color: #FF1493;
             font-weight: 700;
             margin-bottom: 1.5rem;
-            font-size: 2rem;
-            text-align: center;
+            font-size: 1.8rem;
         }
-
-        .service-text {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            line-height: 1.8;
-            text-align: center;
-        }
-
-        /* Modern section styling */
-        .section-title {
-            font-family: 'Space Grotesk', sans-serif;
-            color: var(--primary-color);
+        
+        /* Service icon styles */
+        .service-icon {
             font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
             text-align: center;
-            letter-spacing: -1px;
         }
-
-        .section-description {
-            color: var(--text-secondary);
-            font-size: 1.4rem;
-            max-width: 1000px;
-            margin: 0 auto 5rem auto;
-            text-align: center;
-            line-height: 1.8;
-            font-family: 'Manrope', sans-serif;
-        }
-
-        /* Enhanced footer design */
-        .modern-footer {
-            background: var(--card-background);
-            padding: 4rem;
-            border-radius: 32px;
-            margin-top: 6rem;
-            border: 1px solid rgba(99, 102, 241, 0.1);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .footer-text {
-            color: var(--primary-color);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 1rem;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-
-        .developer-name {
-            font-family: 'Space Grotesk', sans-serif;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 2.5rem;
+        
+        /* Section styling */
+        .section-title {
+            color: #FF1493;
+            font-size: 3rem;
             font-weight: 700;
             margin-bottom: 2rem;
             text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
-
-        /* Enhanced social links */
+        
+        .section-description {
+            color: #4A5568;
+            font-size: 1.3rem;
+            max-width: 900px;
+            margin: 0 auto 4rem auto;
+            text-align: center;
+            line-height: 1.8;
+        }
+        
+        /* Footer styles */
+        .modern-footer {
+            background: #FFFFFF;
+            padding: 3rem;
+            border-radius: 24px;
+            margin-top: 5rem;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.05);
+        }
+        
+        .footer-text {
+            color: #FF1493;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        
+        .developer-name {
+            color: #FF1493;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
-
+        
         .social-links a {
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            opacity: 0.9;
+            transition: transform 0.3s ease;
         }
-
+        
         .social-links a:hover {
-            transform: translateY(-6px) scale(1.05);
-            opacity: 1;
+            transform: translateY(-4px);
         }
-
+        
+        /* Background styling */
+        .stApp {
+            background: linear-gradient(to bottom right, #F7FAFC, #EDF2F7);
+        }
+        
         /* Hide Streamlit elements */
         #MainMenu {visibility: hidden;}
         footer {visibility: hidden;}
         header {visibility: hidden;}
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .block-container {
-                padding: 1rem;
-            }
-            
-            .company-name {
-                font-size: 4rem;
-            }
-            
-            .tag-line {
-                font-size: 1.4rem;
-            }
-            
-            .service-card {
-                padding: 2rem;
-            }
-            
-            .section-title {
-                font-size: 2.5rem;
-            }
-            
-            .section-description {
-                font-size: 1.2rem;
-            }
-        }
-
-        /* Animation Classes */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .animate-fade-in {
-            animation: fadeIn 0.6s ease-out forwards;
+        
+        /* Service text styling */
+        .service-text {
+            color: #4A5568;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: center;
         }
     </style>
 """, unsafe_allow_html=True)
 
-# Header Section with enhanced animation
+# Header Section
 with st.container():
     st.markdown("""
-        <div class="company-header animate-fade-in">
+        <div class="company-header">
             <h1 class="company-name">AppJingle Solutions</h1>
-            <p class="tag-line">Elevate Your Business with Innovative IT Solutions</p>
-            <h2 style="color: white; font-size: 2.2rem; font-weight: 600; margin-top: 2.5rem; text-align: center; opacity: 0.9;">
-                TRANSFORMING IDEAS INTO DIGITAL REALITY
+            <p class="tag-line">Boost your business with our IT solutions</p>
+            <h2 style="color: white; font-size: 2rem; font-weight: 600; margin-top: 2rem; text-align: center;">
+                YOUR SUCCESS IS OUR TOP CONCERN
             </h2>
-            <p style="color: white; font-size: 1.3rem; font-weight: 400; margin-top: 1.5rem; text-align: center; opacity: 0.8;">
-                We combine creativity, technology, and strategy to deliver exceptional digital solutions 
-                that drive your business forward.
+            <p style="color: white; font-size: 1.2rem; font-weight: 400; margin-top: 1rem; text-align: center;">
+                At AppJingle, we use our experience and commitment to provide great service 
+                and real value to our clients.
             </p>
         </div>
     """, unsafe_allow_html=True)
 
 # What We Do Section
 st.markdown("""
-    <div style='margin: 6rem 0;' class="animate-fade-in">
+    <div style='margin: 5rem 0;'>
         <h2 class="section-title">What We Do</h2>
         <p class="section-description">
-            We specialize in creating intelligent, AI-powered applications that transform your digital presence. 
-            Our solutions are tailored to your unique business needs, combining cutting-edge technology 
-            with user-centric design to deliver exceptional results.
+            We build AI-powered apps for your website and phone that help you make more money. 
+            We understand your business and choose the best technology to help you grow. 
+            Let's work together to make your business even better!
         </p>
     </div>
 """, unsafe_allow_html=True)
 
-# Enhanced Services Section
+# Services Section
 col1, col2, col3 = st.columns(3)
 
 services = [
     {
         "icon": "💻",
         "title": "Web Development",
-        "description": "Create stunning, responsive websites that captivate your audience. Our expert team delivers seamless user experiences with cutting-edge technologies and robust backend systems."
+        "description": "We help you build stunning and functional websites that perfectly align with your business goals. With our expertise, we create intuitive interfaces and robust backend systems."
     },
     {
         "icon": "📱",
         "title": "Mobile Development",
-        "description": "Build powerful mobile applications that engage users and drive results. We specialize in creating intuitive, feature-rich apps for both iOS and Android platforms."
+        "description": "We assist you in creating mobile applications that are simple to use and offer a smooth user experience. Our team of skilled developers will work closely with you."
     },
     {
         "icon": "🤖",
         "title": "AI Development",
-        "description": "Harness the power of artificial intelligence to automate processes and gain valuable insights. We develop smart solutions that help your business stay ahead of the competition."
+        "description": "Tap into the power of artificial intelligence with our AI app development services. We create innovative applications that leverage machine learning to automate processes."
     }
 ]
 
 for col, service in zip([col1, col2, col3], services):
     with col:
         st.markdown(f"""
-            <div class="service-card animate-fade-in">
+            <div class="service-card">
                 <div class="service-icon">{service['icon']}</div>
                 <h3 class="service-title">{service['title']}</h3>
                 <p class="service-text">
@@ -324,12 +232,12 @@ for col, service in zip([col1, col2, col3], services):
             </div>
         """, unsafe_allow_html=True)
 
-# Enhanced Footer
+# Footer
 st.markdown("""
-    <div class="modern-footer animate-fade-in">
+    <div class="modern-footer">
         <div style="text-align: center;">
             <p class="footer-text">
-                Crafted with ❤️ by
+                Developed by
             </p>
             <h3 class="developer-name">Farhan Akbar</h3>
             <div class="social-links">
