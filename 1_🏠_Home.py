@@ -1,6 +1,5 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from datetime import datetime
 
 # Page Configuration
 st.set_page_config(
@@ -29,33 +28,36 @@ st.markdown("""
         /* Header styles */
         .company-header {
             background: linear-gradient(135deg, #FF69B4 0%, #FF1493 100%);
-            padding: 3rem 2rem;
+            padding: 4rem 2rem;
             border-radius: 20px;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             box-shadow: 0 10px 30px rgba(255, 20, 147, 0.2);
             border: 1px solid rgba(255, 182, 193, 0.3);
+            text-align: center;
         }
         
         .company-name {
             color: white;
-            font-size: 3.8rem;
+            font-size: 4.2rem;
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+            line-height: 1.2;
         }
         
         .tag-line {
             color: white;
-            font-size: 1.3rem;
-            font-weight: 300;
-            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
         }
         
         /* Service card styles */
         .service-card {
             background: rgba(255, 255, 255, 0.97);
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(255, 20, 147, 0.1);
             transition: all 0.3s ease;
@@ -73,39 +75,25 @@ st.markdown("""
         .service-title {
             color: #FF1493;
             font-weight: 600;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-        
-        /* Time display */
-        .time-display {
-            background: rgba(255, 255, 255, 0.97);
-            padding: 0.8rem 1.5rem;
-            border-radius: 10px;
-            color: #FF1493;
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            display: inline-block;
-            border: 1px solid rgba(255, 20, 147, 0.3);
-            font-weight: 500;
-            box-shadow: 0 2px 10px rgba(255, 20, 147, 0.1);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
         }
         
         /* Footer styles */
         .modern-footer {
             background: rgba(255, 255, 255, 0.97);
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 15px;
             box-shadow: 0 -5px 15px rgba(255, 20, 147, 0.1);
-            margin-top: 3rem;
+            margin-top: 4rem;
             border: 1px solid rgba(255, 182, 193, 0.3);
         }
         
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 1rem;
-            margin-top: 1rem;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
         
         .social-links a {
@@ -128,19 +116,26 @@ st.markdown("""
         /* Section styling */
         .section-title {
             color: #FF1493;
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 600;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             text-align: center;
         }
         
         .section-description {
             color: #333;
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
+            font-size: 1.3rem;
+            max-width: 900px;
+            margin: 0 auto 3rem auto;
             text-align: center;
-            line-height: 1.6;
+            line-height: 1.8;
+        }
+        
+        /* Service icon styling */
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #FF1493;
         }
         
         /* Hide Streamlit elements */
@@ -150,25 +145,16 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Current Time Display
-st.markdown(f"""
-    <div style="text-align: right;">
-        <div class="time-display">
-            🕒 Current Time (UTC): 2025-02-08 06:13:08 | 👤 User: fabest026
-        </div>
-    </div>
-""", unsafe_allow_html=True)
-
 # Header Section
 with st.container():
     st.markdown("""
         <div class="company-header">
             <h1 class="company-name">AppJingle Solutions</h1>
             <p class="tag-line">Boost your business with our IT solutions</p>
-            <h2 style="color: white; font-size: 1.8rem; font-weight: 600; margin-top: 1.5rem;">
+            <h2 style="color: white; font-size: 2rem; font-weight: 600; margin-top: 2rem;">
                 YOUR SUCCESS IS OUR TOP CONCERN
             </h2>
-            <p style="color: white; font-size: 1.1rem; font-weight: 300;">
+            <p style="color: white; font-size: 1.2rem; font-weight: 300; margin-top: 1rem;">
                 At AppJingle, we use our experience and commitment to provide great service 
                 and real value to our clients.
             </p>
@@ -177,7 +163,7 @@ with st.container():
 
 # What We Do Section
 st.markdown("""
-    <div style='margin: 3rem 0;'>
+    <div style='margin: 4rem 0;'>
         <h2 class="section-title">What We Do</h2>
         <p class="section-description">
             We build AI-powered apps for your website and phone that help you make more money. 
@@ -193,8 +179,10 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.markdown("""
         <div class="service-card">
-            <h3 class="service-title">🌐 Web Development</h3>
-            <p>We help you build stunning and functional websites that perfectly align with your 
+            <div class="service-icon">🌐</div>
+            <h3 class="service-title">Web Development</h3>
+            <p style="font-size: 1.1rem; line-height: 1.6;">
+            We help you build stunning and functional websites that perfectly align with your 
             business goals. With our expertise, we create intuitive interfaces and robust backend 
             systems, ensuring a seamless user experience that enriches your online presence and 
             drives conversions.</p>
@@ -204,8 +192,10 @@ with col1:
 with col2:
     st.markdown("""
         <div class="service-card">
-            <h3 class="service-title">📱 Mobile Development</h3>
-            <p>We assist you in creating mobile applications that are simple to use and offer 
+            <div class="service-icon">📱</div>
+            <h3 class="service-title">Mobile Development</h3>
+            <p style="font-size: 1.1rem; line-height: 1.6;">
+            We assist you in creating mobile applications that are simple to use and offer 
             a smooth user experience. Whether you're looking to develop an app for Android or iOS, 
             our team of skilled developers will work closely with you to understand your needs and 
             deliver a product that fits your demands.</p>
@@ -215,8 +205,10 @@ with col2:
 with col3:
     st.markdown("""
         <div class="service-card">
-            <h3 class="service-title">🤖 AI Development</h3>
-            <p>Tap into the power of artificial intelligence with AppJingle's AI app development 
+            <div class="service-icon">🤖</div>
+            <h3 class="service-title">AI Development</h3>
+            <p style="font-size: 1.1rem; line-height: 1.6;">
+            Tap into the power of artificial intelligence with AppJingle's AI app development 
             services. Our team of experts is dedicated to creating innovative applications that 
             leverage machine learning and deep learning algorithms to automate processes, enhance 
             decision-making, and unlock new possibilities for your business.</p>
@@ -227,10 +219,10 @@ with col3:
 st.markdown("""
     <div class="modern-footer">
         <div style="text-align: center;">
-            <p style="font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: #FF1493;">
+            <p style="font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: #FF1493; margin-bottom: 0.5rem;">
                 Developed by
             </p>
-            <h3 style="color: #FF1493; font-size: 1.5rem; margin: 0.5rem 0;">Farhan Akbar</h3>
+            <h3 style="color: #FF1493; font-size: 1.8rem; margin-bottom: 1.5rem;">Farhan Akbar</h3>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/farhan-akbar-ai/" target="_blank">
                     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
