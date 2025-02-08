@@ -76,7 +76,7 @@ st.markdown("""
         }
         
         .service-title {
-            color: #e4dbe6;                    
+            color: #FF1493;
             font-weight: 700;
             margin-bottom: 1.5rem;
             font-size: 1.8rem;
