@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+from datetime import datetime
 
 # Page Configuration
 st.set_page_config(
@@ -10,7 +11,7 @@ st.set_page_config(
     menu_items=None
 )
 
-# Custom CSS
+# Custom CSS with improved color scheme
 st.markdown("""
     <style>
         /* Main container padding */
@@ -27,24 +28,26 @@ st.markdown("""
         
         /* Header styles */
         .company-header {
-            background: linear-gradient(120deg, #FF6B6B, #e01c80);
+            background: linear-gradient(135deg, #1a1c2d 0%, #2d1a2c 100%);
             padding: 3rem 2rem;
             border-radius: 20px;
             margin-bottom: 2rem;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.1);
         }
         
-        .company-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            background: linear-gradient(120deg, #ffffff, #f0f0f0);
+        .company-name-gradient {
+            background: linear-gradient(120deg, #FF6B6B, #e01c80);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
             margin-bottom: 1rem;
         }
         
         .tag-line {
-            color: white;
+            color: #f0f0f0;
             font-size: 1.2rem;
             font-weight: 300;
             margin-bottom: 0.5rem;
@@ -52,31 +55,50 @@ st.markdown("""
         
         /* Service card styles */
         .service-card {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(26, 28, 45, 0.95);
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
             height: 100%;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #f0f0f0;
         }
         
         .service-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            border-color: rgba(224,28,128,0.5);
         }
         
         .service-title {
-            color: #e01c80;
+            color: #FF6B6B;
             font-weight: 600;
             margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        /* Current time display */
+        .time-display {
+            background: rgba(26, 28, 45, 0.9);
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            color: #f0f0f0;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            border: 1px solid rgba(255,255,255,0.1);
         }
         
         /* Footer styles */
         .modern-footer {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(26, 28, 45, 0.95);
             padding: 1.5rem;
             border-radius: 15px;
-            box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
             margin-top: 3rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #f0f0f0;
         }
         
         .social-links {
@@ -87,11 +109,12 @@ st.markdown("""
         }
         
         .social-links a {
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
         }
         
         .social-links a:hover {
             transform: translateY(-3px);
+            filter: brightness(1.2);
         }
         
         /* Hide Streamlit elements */
@@ -101,24 +124,52 @@ st.markdown("""
         
         /* Background overlay */
         .stApp {
-            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+            background: linear-gradient(rgba(26, 28, 45, 0.97), rgba(26, 28, 45, 0.97)),
                         url("https://images.pexels.com/photos/4097159/pexels-photo-4097159.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
             background-size: cover;
             background-attachment: fixed;
         }
+        
+        /* What We Do section */
+        .section-title {
+            color: #FF6B6B;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .section-description {
+            color: #f0f0f0;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.6;
+        }
     </style>
+""", unsafe_allow_html=True)
+
+# Current Time Display
+current_time = datetime.utcnow().strftime("%Y-%M-%D %H:%M:%S UTC")
+st.markdown(f"""
+    <div style="text-align: right;">
+        <div class="time-display">
+            🕒 {current_time} | User: {st.session_state.get('user', 'fabest026')}
+        </div>
+    </div>
 """, unsafe_allow_html=True)
 
 # Header Section
 with st.container():
     st.markdown("""
         <div class="company-header">
-            <h1 class="company-title">AppJingle Solutions</h1>
+            <h1 class="company-name-gradient">AppJingle Solutions</h1>
             <p class="tag-line">Boost your business with our IT solutions</p>
-            <h2 style="color: white; font-size: 1.8rem; font-weight: 600; margin-top: 1.5rem;">
+            <h2 style="color: #FF6B6B; font-size: 1.8rem; font-weight: 600; margin-top: 1.5rem;">
                 YOUR SUCCESS IS OUR TOP CONCERN
             </h2>
-            <p style="color: white; font-size: 1.1rem; font-weight: 300;">
+            <p style="color: #f0f0f0; font-size: 1.1rem; font-weight: 300;">
                 At AppJingle, we use our experience and commitment to provide great service 
                 and real value to our clients.
             </p>
@@ -127,11 +178,9 @@ with st.container():
 
 # What We Do Section
 st.markdown("""
-    <div style='text-align: center; margin: 3rem 0;'>
-        <h2 style='color: #e01c80; font-size: 2.5rem; font-weight: 600; margin-bottom: 1.5rem;'>
-            What We Do
-        </h2>
-        <p style='font-size: 1.2rem; color: #333; max-width: 800px; margin: 0 auto;'>
+    <div style='margin: 3rem 0;'>
+        <h2 class="section-title">What We Do</h2>
+        <p class="section-description">
             We build AI-powered apps for your website and phone that help you make more money. 
             We understand your business and choose the best technology to help you grow. 
             Let's work together to make your business even better!
@@ -179,7 +228,7 @@ with col3:
 st.markdown("""
     <div class="modern-footer">
         <div style="text-align: center;">
-            <p style="font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: #666;">
+            <p style="font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: #FF6B6B;">
                 Developed by
             </p>
             <h3 style="color: #e01c80; font-size: 1.5rem; margin: 0.5rem 0;">Farhan Akbar</h3>
