@@ -11,7 +11,7 @@ st.set_page_config(
     menu_items=None
 )
 
-# Custom CSS with improved color scheme
+# Custom CSS with pink color scheme
 st.markdown("""
     <style>
         /* Main container padding */
@@ -28,77 +28,77 @@ st.markdown("""
         
         /* Header styles */
         .company-header {
-            background: linear-gradient(135deg, #1a1c2d 0%, #2d1a2c 100%);
+            background: linear-gradient(135deg, #FF69B4 0%, #FF1493 100%);
             padding: 3rem 2rem;
             border-radius: 20px;
             margin-bottom: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 10px 30px rgba(255, 20, 147, 0.2);
+            border: 1px solid rgba(255, 182, 193, 0.3);
         }
         
-        .company-name-gradient {
-            background: linear-gradient(120deg, #FF6B6B, #e01c80);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 3.5rem;
+        .company-name {
+            color: white;
+            font-size: 3.8rem;
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
             margin-bottom: 1rem;
+            letter-spacing: 1px;
         }
         
         .tag-line {
-            color: #f0f0f0;
-            font-size: 1.2rem;
+            color: white;
+            font-size: 1.3rem;
             font-weight: 300;
             margin-bottom: 0.5rem;
         }
         
         /* Service card styles */
         .service-card {
-            background: rgba(26, 28, 45, 0.95);
+            background: rgba(255, 255, 255, 0.97);
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            box-shadow: 0 5px 15px rgba(255, 20, 147, 0.1);
             transition: all 0.3s ease;
             height: 100%;
-            border: 1px solid rgba(255,255,255,0.1);
-            color: #f0f0f0;
+            border: 1px solid rgba(255, 182, 193, 0.3);
+            color: #333;
         }
         
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-            border-color: rgba(224,28,128,0.5);
+            box-shadow: 0 8px 25px rgba(255, 20, 147, 0.2);
+            border-color: #FF1493;
         }
         
         .service-title {
-            color: #FF6B6B;
+            color: #FF1493;
             font-weight: 600;
             margin-bottom: 1rem;
             font-size: 1.5rem;
         }
         
-        /* Current time display */
+        /* Time display */
         .time-display {
-            background: rgba(26, 28, 45, 0.9);
-            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.97);
+            padding: 0.8rem 1.5rem;
             border-radius: 10px;
-            color: #f0f0f0;
-            font-size: 0.9rem;
+            color: #FF1493;
+            font-size: 1rem;
             margin-bottom: 1rem;
             display: inline-block;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 20, 147, 0.3);
+            font-weight: 500;
+            box-shadow: 0 2px 10px rgba(255, 20, 147, 0.1);
         }
         
         /* Footer styles */
         .modern-footer {
-            background: rgba(26, 28, 45, 0.95);
-            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.97);
+            padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 -5px 15px rgba(255, 20, 147, 0.1);
             margin-top: 3rem;
-            border: 1px solid rgba(255,255,255,0.1);
-            color: #f0f0f0;
+            border: 1px solid rgba(255, 182, 193, 0.3);
         }
         
         .social-links {
@@ -117,22 +117,17 @@ st.markdown("""
             filter: brightness(1.2);
         }
         
-        /* Hide Streamlit elements */
-        #MainMenu {visibility: hidden;}
-        footer {visibility: hidden;}
-        header {visibility: hidden;}
-        
-        /* Background overlay */
+        /* Background styling */
         .stApp {
-            background: linear-gradient(rgba(26, 28, 45, 0.97), rgba(26, 28, 45, 0.97)),
+            background: linear-gradient(rgba(255, 240, 245, 0.97), rgba(255, 240, 245, 0.97)),
                         url("https://images.pexels.com/photos/4097159/pexels-photo-4097159.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
             background-size: cover;
             background-attachment: fixed;
         }
         
-        /* What We Do section */
+        /* Section styling */
         .section-title {
-            color: #FF6B6B;
+            color: #FF1493;
             font-size: 2.5rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
@@ -140,22 +135,26 @@ st.markdown("""
         }
         
         .section-description {
-            color: #f0f0f0;
+            color: #333;
             font-size: 1.2rem;
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
             line-height: 1.6;
         }
+        
+        /* Hide Streamlit elements */
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        header {visibility: hidden;}
     </style>
 """, unsafe_allow_html=True)
 
 # Current Time Display
-current_time = datetime.utcnow().strftime("%Y-%M-%D %H:%M:%S UTC")
 st.markdown(f"""
     <div style="text-align: right;">
         <div class="time-display">
-            🕒 {current_time} | User: {st.session_state.get('user', 'fabest026')}
+            🕒 Current Time (UTC): 2025-02-08 06:13:08 | 👤 User: fabest026
         </div>
     </div>
 """, unsafe_allow_html=True)
@@ -164,12 +163,12 @@ st.markdown(f"""
 with st.container():
     st.markdown("""
         <div class="company-header">
-            <h1 class="company-name-gradient">AppJingle Solutions</h1>
+            <h1 class="company-name">AppJingle Solutions</h1>
             <p class="tag-line">Boost your business with our IT solutions</p>
-            <h2 style="color: #FF6B6B; font-size: 1.8rem; font-weight: 600; margin-top: 1.5rem;">
+            <h2 style="color: white; font-size: 1.8rem; font-weight: 600; margin-top: 1.5rem;">
                 YOUR SUCCESS IS OUR TOP CONCERN
             </h2>
-            <p style="color: #f0f0f0; font-size: 1.1rem; font-weight: 300;">
+            <p style="color: white; font-size: 1.1rem; font-weight: 300;">
                 At AppJingle, we use our experience and commitment to provide great service 
                 and real value to our clients.
             </p>
@@ -228,10 +227,10 @@ with col3:
 st.markdown("""
     <div class="modern-footer">
         <div style="text-align: center;">
-            <p style="font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: #FF6B6B;">
+            <p style="font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: #FF1493;">
                 Developed by
             </p>
-            <h3 style="color: #e01c80; font-size: 1.5rem; margin: 0.5rem 0;">Farhan Akbar</h3>
+            <h3 style="color: #FF1493; font-size: 1.5rem; margin: 0.5rem 0;">Farhan Akbar</h3>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/farhan-akbar-ai/" target="_blank">
                     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
