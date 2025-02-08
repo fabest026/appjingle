@@ -1,4 +1,17 @@
-# (Previous imports and page configuration remain the same)
+
+import streamlit as st
+from streamlit_option_menu import option_menu
+from datetime import datetime
+
+# Page Configuration
+st.set_page_config(
+    page_title="AppJingle Solutions",
+    page_icon="💫",
+    layout="wide",
+    initial_sidebar_state="auto",
+    menu_items=None
+)
+                                        
 
 # Updated CSS with purple color scheme
 st.markdown("""
