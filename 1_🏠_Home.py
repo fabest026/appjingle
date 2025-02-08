@@ -11,19 +11,61 @@ st.set_page_config(
     menu_items=None
 )
 
-# Custom CSS with improved visibility                    
-  
+# Custom CSS with improved visibility
 st.markdown("""
     <style>
-        /* Previous styles remain the same until service card styles */
+        /* Main container styling */
+        .block-container {
+            padding: 1rem 3rem;
+            max-width: 1400px;
+        }
         
+        /* Typography */
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        
+        /* Header styles */
+        .company-header {
+            background: linear-gradient(135deg, #2D3436, #000000);
+            padding: 4rem 2rem;
+            border-radius: 24px;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .company-name {
+            font-size: 5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+            line-height: 1.1;
+            color: #FF1493;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .tag-line {
+            color: #FFFFFF;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        /* Service card styles */
         .service-card {
-            background: #e4dbe6;  /* Updated background color */
+            background: #FFFFFF;
             padding: 2.5rem;
             border-radius: 24px;
             transition: all 0.4s ease;
             height: 100%;
-            border: 1px solid rgba(0,0,0,0.1);
+            border: 1px solid #E2E8F0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
         
@@ -34,7 +76,7 @@ st.markdown("""
         }
         
         .service-title {
-            color: #333333;  /* Darker text for better contrast on new background */
+            color: #FF1493;
             font-weight: 700;
             margin-bottom: 1.5rem;
             font-size: 1.8rem;
@@ -48,41 +90,37 @@ st.markdown("""
             text-align: center;
         }
         
-        /* Developer name styling */
-        .developer-name {
-            color: #e4dbe6;  /* Updated color */
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
+        /* Section styling */
+        .section-title {
+            color: #FF1493;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
             text-align: center;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-            background: #333333;
-            padding: 0.5rem 2rem;
-            border-radius: 12px;
-            display: inline-block;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
         
-        /* Service text styling */
-        .service-text {
-            color: #333333;  /* Darker text for better contrast */
-            font-size: 1.1rem;
-            line-height: 1.6;
+        .section-description {
+            color: #4A5568;
+            font-size: 1.3rem;
+            max-width: 900px;
+            margin: 0 auto 4rem auto;
             text-align: center;
-            font-weight: 500;
+            line-height: 1.8;
         }
         
-        /* Modern footer with updated color */
+        /* Footer styles */
         .modern-footer {
-            background: #333333;  /* Dark background for contrast */
+            background: #FFFFFF;
             padding: 3rem;
             border-radius: 24px;
             margin-top: 5rem;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid #E2E8F0;
             box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.05);
         }
         
         .footer-text {
-            color: #e4dbe6;  /* Updated color */
+            color: #FF1493;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -90,32 +128,78 @@ st.markdown("""
             text-align: center;
         }
         
-        /* Date-Time Display */
-        .datetime-display {
-            background: #333333;
-            color: #e4dbe6;
-            padding: 0.8rem 1.5rem;
-            border-radius: 12px;
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
-            text-align: right;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 500;
-            letter-spacing: 0.5px;
+        .developer-name {
+            color: #FF1493;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .social-links a {
+            transition: transform 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-4px);
+        }
+        
+        /* Background styling */
+        .stApp {
+            background: linear-gradient(to bottom right, #F7FAFC, #EDF2F7);
+        }
+        
+        /* Hide Streamlit elements */
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        header {visibility: hidden;}
+        
+        /* Service text styling */
+        .service-text {
+            color: #4A5568;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: center;
         }
     </style>
 """, unsafe_allow_html=True)
 
-# DateTime Display
+# Header Section
+with st.container():
+    st.markdown("""
+        <div class="company-header">
+            <h1 class="company-name">AppJingle Solutions</h1>
+            <p class="tag-line">Boost your business with our IT solutions</p>
+            <h2 style="color: white; font-size: 2rem; font-weight: 600; margin-top: 2rem; text-align: center;">
+                YOUR SUCCESS IS OUR TOP CONCERN
+            </h2>
+            <p style="color: white; font-size: 1.2rem; font-weight: 400; margin-top: 1rem; text-align: center;">
+                At AppJingle, we use our experience and commitment to provide great service 
+                and real value to our clients.
+            </p>
+        </div>
+    """, unsafe_allow_html=True)
+
+# What We Do Section
 st.markdown("""
-    <div class="datetime-display">
-        🕒 2025-02-08 06:24:28 UTC | 👤 fabest026
+    <div style='margin: 5rem 0;'>
+        <h2 class="section-title">What We Do</h2>
+        <p class="section-description">
+            We build AI-powered apps for your website and phone that help you make more money. 
+            We understand your business and choose the best technology to help you grow. 
+            Let's work together to make your business even better!
+        </p>
     </div>
 """, unsafe_allow_html=True)
 
-# (Rest of the header section remains the same)
-
-# Services Section with updated colors
+# Services Section
 col1, col2, col3 = st.columns(3)
 
 services = [
@@ -148,7 +232,7 @@ for col, service in zip([col1, col2, col3], services):
             </div>
         """, unsafe_allow_html=True)
 
-# Footer with updated colors
+# Footer
 st.markdown("""
     <div class="modern-footer">
         <div style="text-align: center;">
