@@ -1,4 +1,54 @@
-from dotenv import load_dotenv
+from                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   dotenv import load_dotenv
 load_dotenv()
 
 import streamlit as st
@@ -174,12 +224,16 @@ def apply_custom_css():
         unsafe_allow_html=True
     )
 
-# Page configuration
 st.set_page_config(
     page_title="Keyword Cluster AI",
     page_icon="📈",
     layout="wide",
     initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': None,
+        'Report a bug': None,
+        'About': None
+    }
 )
 
 # Apply custom CSS
