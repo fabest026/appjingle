@@ -195,8 +195,6 @@ st.markdown(
     <div class="header-container">
         <h1 class="main-title">✨ Keyword Cluster AI ✨</h1>
         <p class="subtitle">Powered by AppJingle Solutions</p>
-                                                                   
-  
         <div class="stats-container">
             <div class="stat-card">
                 <div class="stat-value">24</div>
@@ -215,7 +213,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
 # Sidebar
 with st.sidebar:
     st.markdown(
