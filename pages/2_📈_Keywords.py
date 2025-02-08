@@ -41,47 +41,27 @@ def apply_custom_styling():
             min-height: 100vh;
             padding-bottom: 100px;
         }
-        
-       # Add this to your apply_custom_styling() function
-"""
-/* Header container */
-.header-container {
-    background: linear-gradient(135deg, #6366F1 0%, #A855F7 100%);
-    padding: 2.5rem;
-    border-radius: 20px;
-    margin-bottom: 2rem;
-    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
-    text-align: center;
-}
 
-.header-title {
-    color: white;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.header-subtitle {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-/* Remove the previous stats-grid and stat-card styles */
-"""
+        /* Header container */
+        .header-container {
+            background: linear-gradient(135deg, #6366F1 0%, #A855F7 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+            text-align: center;
+        }
         
         .header-title {
             color: white;
             font-size: 2.5rem;
             font-weight: 700;
-            text-align: center;
             margin-bottom: 1rem;
         }
         
         .header-subtitle {
             color: rgba(255, 255, 255, 0.9);
             font-size: 1.2rem;
-            text-align: center;
             margin-bottom: 2rem;
         }
         
@@ -325,7 +305,7 @@ if generate_button and keyword:
                 }
             )
             
-            response = model.generate_content(prompt)
+            response = model.generate(prompt)
             st.session_state.response = response.text
             st.session_state.analysis_count += 1
             
@@ -336,7 +316,8 @@ if generate_button and keyword:
 
 # Clear data
 if clear_button:
-    st.session_state.clear()
+    st.session_state.response = None
+    st.session_state.analysis_count = 0
     st.experimental_rerun()
 
 # Display results
