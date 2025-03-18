@@ -10,7 +10,7 @@ import random
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 # function to load Gemini Pro model and get reponses
-model=genai.GenerativeModel("gemini-1.5-pro-latest")
+model=genai.GenerativeModel("gemini-2.0-flash")
 def get_gemini_response(input,image):
     if input!="":
         response=model.generate_content([input,image])
