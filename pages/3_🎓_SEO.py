@@ -10,45 +10,24 @@ import os
 # Configure Google API key
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
-# Set up the Model
+# Create the model
 generation_config = {
   "temperature": 1,
   "top_p": 0.95,
   "top_k": 40,
-  "max_output_tokens": 8192
+  "max_output_tokens": 8192,
+  "response_mime_type": "text/plain",
 }
 
-safety_settings = [
-    {
-        "category": "HARM_CATEGORY_HARASSMENT",
-        "threshold": "BLOCK_MEDIUM_AND_ABOVE"
-    },
-    {
-        "category": "HARM_CATEGORY_HATE_SPEECH",
-        "threshold": "BLOCK_MEDIUM_AND_ABOVE"
-    },
-    {
-        "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
-        "threshold": "BLOCK_MEDIUM_AND_ABOVE"
-},
-    {
-        "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
-        "threshold": "BLOCK_MEDIUM_AND_ABOVE"
-    },
-]
-
-# Load Gemini Pro model
 model = genai.GenerativeModel(
-  model_name="gemini-2.0-flash",
+  model_name="gemini-2.5-flash-preview-04-17", # Updated model name here
   generation_config=generation_config,
-  # safety_settings = Adjust safety settings
-  # See https://ai.google.dev/gemini-api/docs/safety-settings
 )
 
 
 # Navbar
 st.set_page_config(
-    page_title="Seo Helper",
+    page_title="AI Keywords Injector",
     page_icon="🎓",
     layout="centered",
     initial_sidebar_state="collapsed",
@@ -57,7 +36,7 @@ st.set_page_config(
 # Add the Title
 st.markdown(
     "<h1 style='text-align: center; color: black;'>"
-    "✨ AI SEO Helper"
+    "✨ AI Keywords Injector"
     "</h1>",
     unsafe_allow_html=True
 )
